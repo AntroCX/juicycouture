@@ -73,7 +73,9 @@ define('BLACK_FRIDAY', 'Y');
 require_once __DIR__ . '/include/autoload.php';
 
 // Автозагрузка классов composer
-require_once __DIR__ . '/../../../vendor/autoload.php';
+if (file_exists($_SERVER['DOCUMENT_ROOT'] . '../vendor/autoload.php')) {
+    require_once($_SERVER['DOCUMENT_ROOT'] . '../vendor/autoload.php');
+}
 
 require_once __DIR__ . '/include/env.php';
 

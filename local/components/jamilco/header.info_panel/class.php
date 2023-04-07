@@ -22,7 +22,8 @@ class HeaderInfoPanelComponent extends CBitrixComponent
         $dbRes = CIBlockElement::GetList(
             ['SORT' => 'asc'],
             [
-                'IBLOCK_ID' => IblockHelper::getIblockIdByCode('header_info_panel'),
+                // 'IBLOCK_ID' => IblockHelper::getIblockIdByCode('header_info_panel'),
+                'IBLOCK_ID' => 27,
                 'ACTIVE' => 'Y',
                 'ACTIVE_DATE' => 'Y',
             ],

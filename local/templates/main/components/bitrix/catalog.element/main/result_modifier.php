@@ -1026,3 +1026,180 @@ $arResult['JS_OBJ']['WDL_ELEMENT_ITEM'][$arResult['ID']] = [
     'category'      => $category,
     'variant'       => $arResult['PROPERTIES']['ARTNUMBER']['VALUE'],
 ];
+
+$arColorPics = getColors();
+$colors = [];
+$nameToLink = $arResult["NAME"];
+
+$arCatalog = $arResult['CATALOGS'][$arParams['IBLOCK_ID']];
+
+$arOfferFilter = [
+    'IBLOCK_ID' => $arCatalog['IBLOCK_ID'],
+    0           => [
+        'LOGIC'                  => 'OR',
+        '!PROPERTY_DELIVERY_CAN' => false,
+    ]
+];
+if ($arParams['CITY_STORES_NAME']) $arOfferFilter[0]['PROPERTY_RETAIL_CITIES'] = $arParams['CITY_STORES_NAME'];
+
+//находим все товары с таким именем
+$rsData = \CIBlockElement::GetList(
+    array(),
+    [
+        'ACTIVE'            => 'Y',
+        'ACTIVE_DATE'       => 'Y',
+        'IBLOCK_ID'         => $arCatalog['PRODUCT_IBLOCK_ID'],
+        'SECTION_ID'        => $arResult["IBLOCK_SECTION_ID"],
+        'NAME'              => $nameToLink,
+        '=ID'               => \CIBlockElement::SubQuery('PROPERTY_CML2_LINK', $arOfferFilter),
+    ],
+    false,
+    false,
+    ['ID', 'DETAIL_PAGE_URL', 'PROPERTY_RETAIL_QUANTITY', 'PROPERTY_SPECIALOFFER', 'CATALOG_QUANTITY']
+);
+while ($arrData = $rsData->GetNext()) {
+
+    if ($arrData['ID'] != $arResult['ID']) {
+        // sale товары нельзя бронировать, если цвет только для бронирования и он - скидочный, то пропускаем его
+        //if ($arrData['PROPERTY_SPECIALOFFER_ENUM_ID'] > 0) continue;
+    }
+
+    //находим цвета
+    $rsSCUData = \CIBlockElement::GetList(
+        array('PROPERTY_MORE_PHOTO' => 'DESC'),
+        array(
+            'IBLOCK_ID'          => $arCatalog['IBLOCK_ID'],
+            'PROPERTY_CML2_LINK' => $arrData["ID"],
+            'ACTIVE'             => 'Y',
+        ),
+        false,
+        array("nTopCount" => 20),
+        array("ID", "PROPERTY_COLOR", "PROPERTY_MORE_PHOTO", "PROPERTY_DELIVERY_CAN", "PROPERTY_RETAIL_CITIES", "PRICE_1", "PRICE_2")
+    );
+
+    while ($arrSCUData = $rsSCUData->Fetch()) {
+        if (!$arrSCUData["PROPERTY_COLOR_VALUE"]) $arrSCUData["PROPERTY_COLOR_VALUE"] = $arrData["ID"];
+        if ($arrSCUData["PROPERTY_MORE_PHOTO_VALUE"][0] > 0) {
+            $itemPhoto = array_change_key_case(
+                CFile::ResizeImageGet($arrSCUData["PROPERTY_MORE_PHOTO_VALUE"][0], array('width' => 64, 'height' => 64), BX_RESIZE_IMAGE_EXACT, true),
+                CASE_UPPER
+            );
+        }
+      
+        $price = (int)(($arrSCUData["PRICE_2"] && $arrSCUData["PRICE_2"] < $arrSCUData["PRICE_1"]) ? $arrSCUData["PRICE_2"] : $arrSCUData["PRICE_1"]);
+        $arColor = array(
+            "id"         => $arrSCUData["PROPERTY_COLOR_VALUE"].$arrData["ID"],
+            "code"       => $arrSCUData["PROPERTY_COLOR_VALUE"],
+            "url"        => ToLower($arrData["DETAIL_PAGE_URL"]),
+            "name"       => $arColorPics[$arrSCUData["PROPERTY_COLOR_VALUE"]]["UF_NAME"],
+            "picture"    => CFile::GetPath($arColorPics[$arrSCUData["PROPERTY_COLOR_VALUE"]]["UF_FILE"]),
+            "more_photo" => $itemPhoto["SRC"],
+            "can_buy"    => ($arrSCUData['PROPERTY_DELIVERY_CAN_ENUM_ID'] > 0),
+            "can_rezerv" => ($arParams['CITY_STORES_NAME'] && in_array($arParams['CITY_STORES_NAME'], $arrSCUData['PROPERTY_RETAIL_CITIES_VALUE'])),
+            "product"    => $arrData["ID"],
+            "price"      => $price,
+        );
+        $arColor["buy_class"] = ($arColor['can_buy']) ? '' : 'not-buy';
+
+        // добавляем к цвету перелинкованные цвета
+        if ($arrData['ID'] == $arResult['ID'] || $arColor['can_buy'] || $arColor['can_rezerv']) {
+            $colors[$arColor["id"]] = $arColor;
+
+            break; // одного ТП достаточно
+        }
+    }
+}
+
+// если все цвета недоступны инициализируем текущим товаром
+if (empty($colors)) {
+    $productColor = $arResult["OFFERS"][0]["PROPERTIES"]["COLOR"]["VALUE"];
+    $itemPhoto = array_change_key_case(
+        CFile::ResizeImageGet(
+            $arResult["OFFERS"][0]["PROPERTIES"]["MORE_PHOTO"]["VALUE"][0],
+            array('width' => 38, 'height' => 38),
+            BX_RESIZE_IMAGE_EXACT,
+            true
+        ),
+        CASE_UPPER
+    );
+    $price = (int)(($arResult["OFFERS"][0]["CATALOG_PRICE_2"] && $arResult["OFFERS"][0]["CATALOG_PRICE_2"] < $arResult["OFFERS"][0]["CATALOG_PRICE_1"]) ? $arResult["OFFERS"][0]["CATALOG_PRICE_2"] : $arResult["OFFERS"][0]["CATALOG_PRICE_1"]);
+    $colors[$productColor.$arResult["ID"]] = [
+        "id"         => $productColor.$arResult["ID"],
+        "code"       => $productColor,
+        "url"        => ToLower($arResult["DETAIL_PAGE_URL"]),
+        "name"       => $arColorPics[$productColor]["UF_NAME"],
+        "picture"    => CFile::GetPath($arColorPics[$productColor]["UF_FILE"]),
+        "more_photo" => $itemPhoto["SRC"],
+        "can_buy"    => ($arResult['CATALOG_QUANTITY'] > 0),
+        "can_rezerv" => ($arResult['PROPERTY_RETAIL_QUANTITY_VALUE'] > 0 && $arParams['CITY_STORES_NAME'] > ''),
+        "product"    => $arResult["ID"],
+        "price"      => $price
+    ];
+}
+
+$arResult['PRODUCT_CAN_BUY'] = 'N';
+foreach ($arResult["OFFERS"] as $arOffer) {
+    /* Цвет */
+    //if (!$arOffer["DISPLAY_PROPERTIES"]["COLOR"]["VALUE"]) $arOffer["DISPLAY_PROPERTIES"]["COLOR"]["VALUE"] = $arResult['ID'];
+    // у sku должен быть задан цвет
+    if ($arOffer["DISPLAY_PROPERTIES"]["COLOR"]["VALUE"]) {
+        $color = array(
+            "id"   => $arOffer["DISPLAY_PROPERTIES"]["COLOR"]["VALUE"].$arOffer['PROPERTIES']['CML2_LINK']['VALUE'],
+            "code" => $arOffer["DISPLAY_PROPERTIES"]["COLOR"]["VALUE"],
+            "name" => ToLower($arOffer["DISPLAY_PROPERTIES"]["COLOR"]["DISPLAY_VALUE"]),
+            //"sort" => $arOffer["DISPLAY_PROPERTIES"]["COLOR"]["VALUE_SORT"],
+        );
+
+        if (!isset($colors[$color["id"]])) {
+            if (isset($arColorPics[$color["id"]]) || isset($arColorPics[$color["code"]])) {
+                $arColorPic = ($arColorPics[$color["id"]]) ?: $arColorPics[$color["code"]];
+                $color["picture"] = CFile::GetPath($arColorPic["UF_FILE"]);
+                $color["sort"] = intval($arColorPic["UF_SORT"]);
+            }
+
+            $colors[$color["id"]] = $color;
+        }
+    }
+
+    $arOffer['PRICES']['BASE']['VALUE'] = $arOffer['CATALOG_PRICE_1'];
+    $arOffer['PRICES']['SALE']['VALUE'] = $arOffer['CATALOG_PRICE_2'];
+    if (!$arOffer['PRICES']['SALE']['VALUE']) $arOffer['PRICES']['SALE']['VALUE'] = $arOffer['PRICES']['BASE']['VALUE'];
+
+    // запросим остаток на складе розницы
+    if ($arOffer['DENIED_RESERVATION'] != 'Y') {
+        $st = \CCatalogStoreProduct::GetList(
+            [],
+            [
+                'STORE_ID'   => $arStoresID,
+                'PRODUCT_ID' => $arOffer['ID'],
+                '>AMOUNT'    => 0,
+            ]
+        );
+        if ($arStore = $st->Fetch()) {
+            // товар есть на розничном складе
+        } else {
+            $arOffer['DENIED_RESERVATION'] = 'Y';
+        }
+    }
+
+    if (!$arOffer['CATALOG_QUANTITY']) $arOffer['DENIED_DELIVERY'] = 'Y'; // вараинт OMNI_Delivery не учитывается, т.к. на этом этапе мы не запрашиваем доступные РМ
+
+    //флаг возможности доставки
+    if ($arOffer['DENIED_DELIVERY'] != 'Y') {
+        $arResult['PRODUCT_CAN_BUY'] = 'Y';
+    }
+}
+
+// отметим те цвета, которые подходят к открытому артикулу
+foreach ($colors as $key => $color) {
+    $arColorUrl = explode("/", $color['url']);
+    $cnt = count($arColorUrl);
+    $codeFromUrl = $arColorUrl[$cnt - 2];
+    $color['open'] = (!$color['url'] || ($codeFromUrl == ToLower($arResult['CODE']))) ? 'Y' : 'N';
+    if ($color['open'] == 'Y') $color['buy_class'] = '';
+    $colors[$key] = $color;
+}
+
+$arResult["JS_OBJ"] = array(
+    "colors"              => array_values($colors),
+);

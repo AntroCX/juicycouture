@@ -212,7 +212,47 @@ $storeName = \Jamilco\Main\Retail::getStoreName(true);
                         </div>
                     </div>
                 </div>
+                <pre style="display: none">
+                    <?php print_r($arResult['JS_OBJ']); ?>
+                </pre>
                 <div class="b-catalog-detail__artnum">Артикул: <span class="b-catalog-detail__artnum-data"><?=$arResult['OFFERS'][$arResult['FIRST_OFFER_ID']]['NAME']?></span></div>
+                <div class="b-catalog-detail__colors">
+                    <?php if (count($arResult["JS_OBJ"]['colors']) > 0) {
+                        $openColor = false;
+                        foreach ($arResult["JS_OBJ"]['colors'] as $arColor) {
+                            if ($arColor['open'] == 'Y') $openColor = $arColor;
+                        } ?>
+                        <div id="colorList" class="color-list">
+                            <div class="color-list_label">Цвет: <?= $openColor['name'] ?></div>
+                            <div class="flex">
+                                <? foreach ($arResult["JS_OBJ"]['colors'] as $key => $arColor) {
+                                    // $imageColor = ($arColor['more_photo'])?:$arColor['picture'];
+                                    $imageColor = $arColor['picture'];
+                                    if (!$arColor['name'] || !$imageColor) continue;
+                                    ?>
+                                    <div class="color-list_item <?= $arColor['buy_class'] ?> <?=($arColor['open'] == 'Y' ? 'active' : ''); ?> <?=($key > 3)?'hidden':'';?>" title="<?= $arColor['name'] ?>">
+                                    <?php if($APPLICATION->GetCurDir() == $arColor['url']) : ?>
+                                        <span class="color-list_link">
+                                            <img src="https://juicycouture.ru<?php echo $imageColor; ?>" alt="<?php echo $arColor['name']; ?>">
+                                        </span>
+                                    <?php else : ?>
+                                        <a href="<?php echo $arColor['url']; ?>" class="color-list_link">
+                                            <img src="https://juicycouture.ru<?php echo $imageColor; ?>" alt="<?php echo $arColor['name']; ?>">
+                                        </a>
+                                    <?php endif; ?>
+                                    </div>
+                                <? } ?>
+                                <?if(count($arResult["JS_OBJ"]['colors']) > 3):?>
+                                    <div class="js-toggle-colors shown" title="Все цвета">
+                                        <span class="all-colors">Ещё цвета</span>
+                                    </div>
+                                <?endif;?>
+                            </div>
+                        </div>
+                        <?
+                    } ?>
+                </div>
+
                 <div class="b-catalog-detail__sizes">
                     <div class="b-catalog-detail__sizes-titles">
                         <div class="row">
@@ -256,7 +296,6 @@ $storeName = \Jamilco\Main\Retail::getStoreName(true);
                         Данный товар закончился, выберите другой цвет.
                     </div>
                 </div>
-
                 <div class="b-catalog-detail__colors <?=(count($arResult['SKU_PROPS']['COLOR']['VALUES']) <= 1)?'hidden':'';?>">
                     <div class="b-catalog-detail__colors-title">
                         Цвет:

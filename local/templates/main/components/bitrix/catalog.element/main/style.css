@@ -68,3 +68,49 @@
 @media only screen and (max-width: 1199px){
   .complect-block{ display: none !important; }
 }
+
+.color-list {
+
+}
+.color-list_item {
+  width: 34px;
+  height: 34px;
+  padding: 2px;
+  transition: .4s opacity;
+}
+.color-list_item:hover {
+  opacity: .7;
+}
+.color-list_item.active {
+  border: 1px solid #000;
+}
+.color-list_item .color-list_link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.color-list_item img {
+  width: 100%;
+}
+.color-list .flex {
+  display: flex;
+  grid-gap: 8px;
+  align-items: center;
+}
+.all-colors {
+  color: #da1884;
+  cursor: pointer;
+  transition: .4s opacity;
+}
+.all-colors:hover {
+  opacity: .7;
+}
+.color-list_item.shown,
+.js-toggle-colors.shown {
+  display: flex;
+}
+.color-list_item.hidden,
+.js-toggle-colors {
+  display: none;
+}
+

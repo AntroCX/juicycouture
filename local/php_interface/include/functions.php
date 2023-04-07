@@ -53,3 +53,28 @@ function getOwnerEmail($order)
     }
     return false;
 }
+
+// Получить цвета
+// необходимые классы
+function getColors() {
+    \Bitrix\Main\Loader::IncludeModule("highloadblock");
+
+    $colors = [];
+    $hlblock = \Bitrix\Highloadblock\HighloadBlockTable::getById(HIBLOCK_COLOR_ID)->fetch();
+    $entity = \Bitrix\Highloadblock\HighloadBlockTable::compileEntity($hlblock);
+    $dataClass = $entity->getDataClass();
+    $rsColors = $dataClass::getList(array(
+        'order' => [],
+        'select' => [
+            'UF_XML_ID',
+            'UF_NAME',
+            'UF_FILE',
+            'UF_SORT'
+        ]
+    ));
+    while ($arColor = $rsColors->Fetch()) {
+        $colors[$arColor['UF_XML_ID']] = $arColor;
+    }
+
+    return $colors;
+}
