@@ -1,0 +1,79 @@
+@import "../colors";
+
+.b-tabs {
+  padding-top: 60px;
+  padding-bottom: 30px;
+  @media (min-width: 768px) {
+    padding-top: 0px;
+    padding-bottom: 40px;
+  }
+  @media (min-width: 992px) {
+    padding-bottom: 60px;
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding-top: 45px;
+  }
+  &__content {
+    &-item {
+      &-image {
+        width: 100%;
+        max-width: 567px;
+      }
+      &-name {
+        font-size: 30px;
+        font-weight: bold;
+        text-align: center;
+        text-transform: uppercase;
+        line-height: 51px;
+        @media (min-width: 768px) {
+          font-size: 53px;
+          padding: 38px 0px 8px 0px;
+        }
+        @media (min-width: 992px) {
+          padding: 130px 60px 8px 60px;
+        }
+      }
+      &-description {
+        font-family: Georgia;
+        font-size: 15px;
+        font-style: italic;
+        text-align: center;
+        margin-bottom: 15px;
+        @media (min-width: 768px) {
+          padding: 0px 10px;
+          margin-bottom: 45px;
+        }
+        @media (min-width: 992px) {
+          padding: 0px 60px;
+        }
+      }
+    }
+  }
+  &__nav {
+    text-align: center;
+    padding-top: 25px;
+    margin-bottom: 40px;
+    &-item {
+      font-size: 20px;
+      font-weight: bold;
+      color: $black !important;
+      text-transform: uppercase;
+      text-decoration: none !important;
+      cursor: pointer;
+      @media (min-width: 768px) {
+        margin-right: 60px;
+      }
+      @media (min-width: 992px) {
+        margin-right: 100px;
+      }
+      &.active {
+        color: $black;
+        border-bottom: 1px solid $pink;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import "../colors";
+
+.b-news {
+  &__item {
+    display: block;
+    color: $black;
+    padding-bottom: 23px;
+    margin-bottom: 23px;
+    border-bottom: 1px solid $gray-e0;
+    &-image {
+      img {
+        width: 100%;
+      }
+    }
+    &:hover {
+      color: $black;
+      .b-news__item-name {
+        color: $pink;
+      }
+    }
+    &-date {
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+    &-name {
+      font-size: 16px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      transition: all 0.4s;
+    }
+  }
+}
+
+.news-detail {
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}

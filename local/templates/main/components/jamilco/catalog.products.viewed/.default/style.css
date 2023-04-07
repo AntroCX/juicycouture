@@ -1,0 +1,32 @@
+.products-viewed {
+    margin-bottom: 60px;
+}
+.products-viewed__title {}
+.products-viewed-item {
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+}
+.products-viewed-item:hover {
+    text-decoration: none;
+}
+.products-viewed-item__image {}
+.products-viewed-item__image img {
+    width: 100%;
+}
+.products-viewed-item__name {
+    min-height: 40px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: #000;
+}
+.products-viewed-item__price {
+    font-weight: bold;
+    font-size: 14px;
+    display: inline-block;
+    color: #000;
+}
+.products-viewed-slider {
+    margin: 20px 0 0 0;
+}

@@ -1,0 +1,25 @@
+@import "../colors";
+
+.b-orders-list {
+  margin-bottom: 40px;
+  .order-num {
+    color: $pink;
+  }
+  &__header {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+  }
+  &__body {
+    border-bottom: 1px solid $gray-cc;
+    &-item {
+      display: block;
+      position: relative;
+      padding: 10px 0px;
+      color: $black !important;
+      border-top: 1px solid $gray-cc;
+
+    }
+  }
+}

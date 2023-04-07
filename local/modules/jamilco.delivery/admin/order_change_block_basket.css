@@ -1,0 +1,9 @@
+.adm-container-draggable[data-id=basket]{ }
+.adm-container-draggable[data-id=basket] .adm-s-gray-title-btn-container{ display: none; }
+.adm-container-draggable[data-id=basket] .adm-s-order-item-title-icon{ display: none; }
+.adm-container-draggable[data-id=basket] .adm-s-order-table-ddi-table{ }
+.adm-container-draggable[data-id=basket] .adm-s-order-table-ddi-table .tac{ pointer-events: none; }
+.adm-container-draggable[data-id=basket] .adm-s-order-table-ddi-table-sku{ pointer-events: none; }
+.adm-container-draggable[data-id=basket] .edit_price{ pointer-events: none; }
+.adm-container-draggable[data-id=basket] .bx-adm-promocode-container{ pointer-events: none; }
+.adm-container-draggable[data-id=basket] span.pencil{ display: none !important; }

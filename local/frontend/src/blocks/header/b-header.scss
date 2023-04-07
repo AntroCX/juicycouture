@@ -1,0 +1,48 @@
+.b-header {
+  &__top-profile-menu-phone {
+    display: none !important;
+
+    @include w-from($screen-md) {
+      display: inline-block !important;
+    }
+  }
+
+  .b-page__mobile-menu {
+    min-height: 500px;
+    position:   fixed;
+    top:        42px;
+
+    .panel__phone-box {
+      width:      100%;
+
+      position:   fixed;
+      bottom:     0;
+
+      border-top: 1px solid #ccc !important;
+    }
+
+    @include w-from($screen-md) {
+      display: none;
+    }
+  }
+
+  &__mobile-btn {
+    margin-top: 15px;
+
+    @include w-from($screen-md) {
+      margin-top: 20px;
+    }
+  }
+
+  @include w-to($screen-md) {
+    position:            sticky;
+    top:                 0;
+    background:          white;
+    z-index:             2000;
+    border-bottom-color: white;
+
+    .b-header__top {
+      position: static;
+    }
+  }
+}

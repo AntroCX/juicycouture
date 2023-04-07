@@ -1,0 +1,5 @@
+@media (min-width:768px){
+  .b-tabs__content-item__text-left .row > div:first-child{
+    float: right;
+  }
+}

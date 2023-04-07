@@ -1,0 +1,27 @@
+@import "../colors";
+
+h1 {
+  margin-bottom: 30px !important;
+}
+
+.b-left-menu {
+  list-style: none;
+  padding-left: 0px;
+  font-size: 14px;
+  li {
+    a {
+      text-transform: uppercase;
+      color: $black;
+      font-weight: bold;
+      text-decoration: none !important;
+      transition: all 0.4s;
+      &:hover {
+        color: $pink;
+      }
+      &.selected {
+        color: $pink;
+      }
+    }
+    margin-bottom: 9px;
+  }
+}

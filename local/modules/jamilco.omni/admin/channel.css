@@ -1,0 +1,36 @@
+.channel{ }
+.channel .edit-table{ }
+.channel .edit-table tr{ }
+.channel .edit-table th{ text-align: center; }
+.channel .edit-table td{ text-align: center; border-bottom: 1px dashed #bbb; padding: 2px; position: relative; }
+.channel .edit-table tr.has-info td{ padding-bottom: 15px; }
+.channel .edit-table td.depth_level_2{ padding-left: 15px; }
+.channel .edit-table td.depth_level_3{ padding-left: 30px; }
+.channel .edit-table td.depth_level_4{ padding-left: 45px; }
+.channel .edit-table td.depth_level_5{ padding-left: 60px; }
+.channel .edit-table td.depth_level_6{ padding-left: 75px; }
+.channel .edit-table td:nth-child(1){ text-align: left; border-right: 1px solid #bbb; width: 20%; }
+.channel .edit-table td span.info{position: absolute; bottom: -2px; right: 12px; white-space: nowrap; font-size: 11px; background: #f5f9f9; color: red; z-index: 1;}
+.channel .edit-table td span.info b{font-size: 15px;}
+.channel .edit-table .adm-submenu-item-arrow{ left: -22px; top: -2px; }
+.channel .edit-table .adm-submenu-item-name{ cursor: pointer; margin: -4px 0 -7px; }
+.channel .edit-table .active-N{ color: #777; }
+.channel .edit-table .adm-submenu-item-link-icon{ float: left; }
+.channel .edit-table .adm-submenu-item-name-link-text{ float: left; }
+.channel .edit-table{ }
+.channel .remove-child-flags{ cursor: pointer; }
+.channel .omni-resave, .channel .omni-resave-all{ float: right; }
+.channel .clear{ clear: both; }
+.channel .adm-detail-pin-btn{ display: none; }
+.channel .omni-loader{ line-height: 29px; }
+
+.section-select{ line-height: 17px; text-align: left;}
+.parent-slide{display: block; float: left; border-radius: 4px; width: 13px; height: 13px; line-height: 13px; text-align: center; font-size: 12px; border: 1px solid transparent; margin: 1px 0 0 0;}
+.parent-slide.parent-yes{cursor: pointer; background: url(/bitrix/images/catalog/load/plus.gif) left top no-repeat;}
+.parent-slide.parent-yes.parent-opened{background: url(/bitrix/images/catalog/load/minus.gif) left top no-repeat;}
+.parent-slide.parent-yes:hover{ background-color: #eee; }
+.child-slide{ padding: 0 0 5px 20px; display: none; }
+.child-slide.child-slide-show{ display: block; }
+
+.locations{text-align: left;}
+.locations .location{margin: 5px 0;}

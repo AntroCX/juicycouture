@@ -1,0 +1,39 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"Мои данные", 
+		"/personal/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Заказы", 
+		"/personal/orders/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Подписка", 
+		"/personal/subscribe/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Бонусная программа", 
+		"/personal/bonuses/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Выйти", 
+		"/?logout=yes", 
+		Array(), 
+		Array(), 
+		"" 
+	)
+);
+?>

@@ -1,0 +1,15 @@
+[
+  {
+    "title": "Главная",
+    "link": "index.html"
+  },
+  {
+    "title": "Товары",
+    "items": [
+      {
+        "title": "Каталог",
+        "link": "catalog.html"
+      }
+    ]
+  }
+]

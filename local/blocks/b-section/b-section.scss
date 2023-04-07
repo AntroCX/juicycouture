@@ -1,0 +1,45 @@
+@import "../colors";
+
+.b-section {
+  &__title {
+    &-wrapper {
+      position: relative;
+      text-align: center;
+      &:before {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: 0px;
+        right: 0px;
+        height: 1px;
+        background: $black;
+        z-index: 0;
+        @media (max-width: 479px) {
+          top: 50%;
+        }
+      }
+      h2 {
+        position: relative;
+        display: inline;
+        background: $white;
+        font-size: 30px;
+        padding-left: 20px;
+        padding-right: 20px;
+        font-weight: bold;
+        text-transform: uppercase;
+        @media (max-width: 479px) {
+          display: inline-block;
+          text-align: center;
+          padding-left: 10px;
+          padding-right: 10px;
+          margin: 18px 15%;
+        }
+        @media (max-width: 320px) {
+          margin: 18px 12%;
+          font-size: 22px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}

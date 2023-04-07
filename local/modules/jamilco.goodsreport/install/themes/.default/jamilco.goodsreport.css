@@ -1,0 +1,14 @@
+/*Menu icon*/
+.jamilco_goodsreport_menu_icon {background: url(/bitrix/panel/main/images/icons-sprite-14.png) no-repeat center -1512px; background-position: center -1457px;}
+.chk-ok {
+    background: url(/bitrix/themes/.default/images/checklist/checklist-sprite.png) no-repeat 0 -123px;
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+}
+.chk-fail {
+    background: url(/bitrix/themes/.default/images/checklist/checklist-sprite.png) no-repeat 0 -110px;
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+}

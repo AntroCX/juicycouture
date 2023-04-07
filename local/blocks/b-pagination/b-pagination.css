@@ -1,0 +1,38 @@
+/*
+  global color for website
+*/
+.b-pagination {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  clear: both; }
+  .b-pagination__prev:before {
+    font-family: FontAwesome;
+    font-size: 13px;
+    content: '\f053'; }
+  .b-pagination__next:before {
+    font-family: FontAwesome;
+    font-size: 13px;
+    content: '\f054'; }
+  .b-pagination li {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 30px; }
+    .b-pagination li span {
+      color: #da1884; }
+    .b-pagination li:last-child {
+      margin-right: 0px; }
+    .b-pagination li:hover a, .b-pagination li.active a {
+      color: #da1884; }
+    .b-pagination li a {
+      font-size: 14px;
+      font-weight: bold;
+      color: #000;
+      text-decoration: none !important;
+      transition: all 0.4s; }
+  .b-pagination__wrapper {
+    text-align: right; }
+
+/*# sourceMappingURL=b-pagination.css.map */

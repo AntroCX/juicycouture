@@ -1,0 +1,13 @@
+.b-mainpage-banner__content{
+  bottom: 12% !important;
+  right: 0;
+  font-family: "PT Sans Narrow",sans-serif;
+}
+.b-mainpage-banner__text-title{
+  font-size: 68px;
+  line-height: 1.2em;
+}
+.b-mainpage-banner__text-subtitle{
+  font-size: 32px;
+  margin: 0 0 5px 0;
+}

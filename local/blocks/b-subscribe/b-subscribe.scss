@@ -1,0 +1,77 @@
+@import "../colors";
+.b-subscribe {
+  position: fixed;
+  background: $gray-ed;
+  width: 280px;
+  height: 410px;
+  bottom: 50px;
+  left: 50px;
+  z-index: 998;
+  border: 1px solid $gray-cc;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  -webkit-transform: translateX(-400px);
+  -moz-transform: translateX(-400px);
+  -ms-transform: translateX(-400px);
+  -o-transform: translateX(-400px);
+  transform: translateX(-400px);
+
+  -webkit-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+  -moz-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+  -o-transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000);
+  transition: all 500ms cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+
+  -webkit-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+  -moz-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+  -o-transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+  transition-timing-function: cubic-bezier(0.860, 0.000, 0.070, 1.000); /* easeInOutQuint */
+
+  label.error-notify {
+    font-size: 10px;
+  }
+
+  &_show {
+    -webkit-transform: translateX(0px);
+    -moz-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    -o-transform: translateX(0px);
+    transform: translateX(0px);
+  }
+
+  &__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    &:before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url(data:image/svg+xml;base64,PCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj48c3ZnIGlkPSJMYXllcl8xIiBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDE2LjYgMTYuNiI+PHBhdGggZD0iTTIzMi44MiwyMzguNTNhMC41LDAuNSwwLDAsMS0uMzUtMC44NWwxNS42LTE1LjZhMC41LDAuNSwwLDEsMSwuNzEuNzFsLTE1LjYsMTUuNkEwLjUsMC41LDAsMCwxLDIzMi44MiwyMzguNTNaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjMyLjMyIC0yMjEuOTQpIi8+PHBhdGggZD0iTTI0OC40MSwyMzguNTNhMC41LDAuNSwwLDAsMS0uMzUtMC4xNWwtMTUuNi0xNS42YTAuNSwwLjUsMCwwLDEsLjcxLTAuNzFsMTUuNiwxNS42QTAuNSwwLjUsMCwwLDEsMjQ4LjQxLDIzOC41M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMzIuMzIgLTIyMS45NCkiLz48L3N2Zz4=) no-repeat center;
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 10px;
+  }
+  &__description {
+    padding: 15px 0px 30px;
+  }
+  &__input-wrapper {
+    padding-bottom: 15px;
+    text-align: left;
+  }
+
+  .checkbox + .error-notify {
+    position: absolute;
+    margin-top: -13px;
+  }
+
+}

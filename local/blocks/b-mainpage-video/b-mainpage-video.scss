@@ -1,0 +1,47 @@
+@import "../colors";
+
+.b-mainpage-video {
+  //background: url("/local/images/content/video-background.jpg?v=4") no-repeat center;
+  background-color: black;
+  background-size: cover;
+  //padding-top: 35px;
+  @media (min-width: 768px) {
+    //margin-top: 50px;
+  }
+  @media (min-width: 992px) {
+    //margin-top: 130px;
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 23px;
+    display: none;
+  }
+  &__description {
+    font-family: Georgia;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 550px;
+    margin: auto;
+    padding-bottom: 25px;
+    display: none;
+  }
+  &__youtube {
+    text-align: center;
+    //padding-bottom: 30px;
+    iframe {
+      width: 100%;
+      @media (min-width: 768px) {
+        width: 724px;
+        height: 400px;
+      }
+      @media (min-width: 992px) {
+        width: 960px;
+        height: 540px;
+      }
+    }
+  }
+}

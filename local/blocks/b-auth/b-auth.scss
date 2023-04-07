@@ -1,0 +1,30 @@
+@import "../colors";
+
+.b-auth {
+  margin-bottom: 40px;
+  input[type=text], input[type=email], input[type=password] {
+    //border: 1px solid $black;
+  }
+  form {
+    padding: 30px 20px;
+    background: $gray-ed;
+  }
+  &__forgot {
+    padding: 15px;
+  }
+  &__soc {
+    margin-top: 30px;
+    &-title {
+      margin-right: 20px;
+    }
+    a {
+      font-size: 18px;
+      color: $black;
+      margin-right: 30px;
+      transition: all 0.4s;
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+}

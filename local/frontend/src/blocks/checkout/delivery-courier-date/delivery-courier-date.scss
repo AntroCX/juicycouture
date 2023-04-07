@@ -1,0 +1,47 @@
+.delivery-courier-date {
+  margin-top: 15px;
+
+  &__select {
+    display:       grid;
+    grid-template: auto/1fr;
+    grid-gap:      15px;
+
+    @include w-from($screen-md) {
+      width:         100%;
+      display:       grid;
+      grid-template: auto/1fr 1fr;
+      grid-gap:      30px;
+    }
+
+    div {
+      position: relative;
+      width:    100%;
+
+      &:after {
+        position:          absolute;
+        top:               50%;
+        right:             20px;
+        width:             9px;
+        height:            6px;
+        transform:         translateY(-50%);
+        background-image:  url('../assets/img/icons/i-dropdown.svg');
+        background-repeat: no-repeat;
+        pointer-events:    none;
+        content:           '';
+      }
+
+    }
+
+    select {
+      width:              100%;
+      padding:            14px 20px;
+      border:             none;
+      appearance:         none;
+      -webkit-appearance: none;
+      border-radius:      0;
+      font:               16px/24px $font-family-pt-sans-narrow;
+      background:         white;
+    }
+  }
+
+}

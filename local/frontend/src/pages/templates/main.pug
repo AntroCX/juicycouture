@@ -1,0 +1,38 @@
+include ../../blocks/_mixins/icons
+
+html(lang="ru" itemscope="" itemtype="http://schema.org/WebPage")
+  include ../includes/meta
+
+  body
+    include ../../blocks/header/header
+    include ../../blocks/promo-strip/promo-strip
+
+    main.main
+      block container
+
+
+    include ../../blocks/footer/footer
+
+    block script
+      include ../includes/scripts
+
+  script(type='yext/javascript' src='./scripts/vendor/main.js')
+  script(type='text/javascript' src="./scripts/vendor/temp.js")
+  script(type='text/javascript' src='./scripts/vendor/jquery-2.2.4.min.js')
+  script(type='text/javascript' src='./scripts/vendor/g-twbs/g-twbs.min.js')
+  script(type='text/javascript' src='./scripts/vendor/i-validate.min.js')
+  script(type='text/javascript' src='./scripts/vendor/i-slick.min.js')
+  script(type='text/javascript' src='./scripts/vendor/swiper.js')
+  script(type='text/javascript' src='./scripts/vendor/i-cookie.min.js')
+  script(type='text/javascript' src='./scripts/vendor/i-mask.min.js')
+  script(type='text/javascript' src='./scripts/vendor/i-mobile.min.js')
+  script(type='text/javascript' src='./scripts/vendor/b-page.min.js')
+  script(type='text/javascript' src='./scripts/vendor/b-subscribe.min.js')
+  script(type='text/javascript' src='./scripts/vendor/b-header.min.js')
+  script(type='text/javascript' src='./scripts/vendor/b-social-links.min.js')
+  script(type='text/javascript' src='./scripts/vendor/b-city-auto-popup.min.js')
+  script(type='text/javascript' src='./scripts/vendor/b-city-popup.min.js')
+  script(type='text/javascript' src='./scripts/vendor/b-fast-cart.min.js')
+  script(type='text/javascript' src='./scripts/vendor/script.js')
+  script(type='text/javascript' src='./scripts/vendor/b-mainpage-banner.min.js')
+  script(type='text/javascript' src='./scripts/vendor/b-tabs.min.js')

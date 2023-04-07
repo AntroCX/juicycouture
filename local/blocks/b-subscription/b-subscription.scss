@@ -1,0 +1,51 @@
+@import "../colors";
+
+.b-subscription {
+  text-align: center;
+  margin: 15px auto 0px auto;
+  @media (min-width: 768px) {
+    padding: 30px 120px;
+    border-top: 1px solid $gray-e0;
+  }
+  @media (min-width: 992px) {
+    margin: auto;
+    padding: 0px;
+    border-top: 0px;
+  }
+  &__title {
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: bold;
+    margin-bottom: 19px;
+    text-transform: uppercase;
+  }
+  &__reg_title{
+    text-transform: uppercase;
+  }
+  &__form {
+    padding-top: 14px;
+    &-email {
+      border: 1px solid $black;
+      height: 34px;
+      outline: none;
+      padding: 5px;
+    }
+    &-submit {
+      background: $black;
+      height: 34px;
+      width: 34px;
+      outline: none;
+      position: relative;
+      border: 1px #000 solid;
+      &:before {
+        font-family: FontAwesome;
+        content: "\f105";
+        color: $white;
+        font-size: 20px;
+        position: absolute;
+        top: 2px;
+        left: 15px;
+      }
+    }
+  }
+}

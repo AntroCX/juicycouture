@@ -1,0 +1,523 @@
+/* баннер, сбор емейл-адресов */
+.subscribe-block {
+    position: relative;
+    height: 90px;
+    overflow: hidden;
+    /*background: #1b1617 url(images/banner.png) center top no-repeat;*/
+    background-color: #000000;
+}
+
+.subscribe-block .subscribe-text {
+    margin: 0 40px;
+    padding: 10px 0 0;
+}
+
+.subscribe-block .subscribe-text:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.subscribe-block .subscribe-title {
+    font-weight: bold;
+    color: #fff;
+    font-size: 32px;
+    line-height: 42px;
+    text-transform: uppercase;
+}
+
+.subscribe-block .subscribe-desc {
+    font-size: 15px;
+    color: #fff;
+}
+
+.subscribe-block .btn__wrap {
+    float: right;
+    margin: -53px 10px 0 0;
+}
+
+.subscribe-block .btn__wrap a.btn {
+    padding: 14px 32px 15px;
+}
+
+.subscribe-block .btn__wrap a.btn:hover {
+    background: #ffffff;
+    color: #da1884;
+}
+
+.subscribe-block .btn__wrap a {
+    background-color: #da1884;
+    color: #ffffff;
+}
+
+@media (min-width: 786px) {
+    .subscribe-block .subscribe-text {
+        width: 756px;
+        margin: 0 auto;
+    }
+}
+@media (max-width: 1024px) {
+    .subscribe-block {
+        display: none;
+    }
+}
+
+
+
+/* попап, форма подписки */
+.js-popup-subscribe {
+    color: #362d2e;
+    z-index: 778 !important;
+}
+
+.js-popup-subscribe .popup__box {
+    max-width: 596px;
+    padding: 22px 50px 0;
+}
+
+.js-popup-subscribe .i-cross {
+    top: 10px !important;
+    right: 11px !important;
+}
+
+.js-popup-subscribe .i-cross:before {
+    content: "";
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: url(images/icon-close.png) center center no-repeat;
+}
+
+.js-popup-subscribe .popup-logo {
+    width: 185px;
+    height: 64px;
+    background: url(images/popup-logo.png) center center no-repeat;
+    margin: 0 auto 14px;
+}
+
+.js-popup-subscribe .popup-title {
+    font-size: 21px;
+    line-height: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.js-popup-subscribe .popup-text {
+    font-family: Arial;
+    font-size: 14px;
+    color: #666;
+    text-align: center;
+}
+
+.js-popup-subscribe .popup-subscribe-coupon {
+    margin: 28px 0 31px 0;
+}
+
+.js-popup-subscribe .popup-subscribe-coupon .popup-email {
+    float: left;
+    width: 228px;
+    margin: 0 16px 0 15px;
+    position: relative;
+}
+
+.js-popup-subscribe .popup-subscribe-coupon input {
+    border: 1px solid #ccc;
+    background: #fff;
+    color: #362d2e;
+    font: 16px/normal 'Arial', sans-serif;
+    background: #F5F4F2;
+    color: #362D2E;
+    display: block;
+    margin: 0;
+    padding: 12px 9px 10px;
+    width: 100%;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    -webkit-border-radius: 0;
+    border-radius: 0;
+    border: 1px solid #F5F4F2;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.js-popup-subscribe .popup-subscribe-coupon .popup-email #email-error  {
+    color: #e91e25;
+    font-size: 12px;
+    margin: 2px 0 0 11px;
+    white-space: nowrap;
+}
+
+.js-popup-subscribe .popup-subscribe-coupon .btn__wrap {
+    float: left;
+}
+
+.js-popup-subscribe .popup-subscribe-coupon .btn__wrap a.btn {
+    font-family: Arial;
+    font-size: 13px;
+    padding: 14px 59px 8px;
+    background: #da1884;
+    color: #ffffff;
+}
+
+.js-popup-subscribe .popup-subscribe-coupon .btn__wrap a.btn:hover {
+    background: #362d2e;
+}
+
+.js-popup-subscribe .popup-subscribe-coupon p {
+    margin-top: 12px;
+    text-align: center;
+    font-size: 12px;
+}
+
+.js-popup-subscribe .popup-footer {
+    background: #f5f4f2;
+    text-align: center;
+    padding: 19px 10px 17px;
+    margin: 0 -50px;
+    display: flex;
+}
+
+.js-popup-subscribe .popup-footer label {
+    display: inline-block !important;
+    font-size: 12px !important;
+    font-family: Arial;
+}
+
+.js-popup-subscribe .popup-footer label:before {
+    background: #fff;
+}
+
+.js-popup-subscribe .popup-footer label.error a {
+    color: red !important;
+}
+
+.js-popup-subscribe .popup-footer label.error:before {
+    border-color: #e91e25;
+}
+.js-popup-subscribe .popup-footer input {
+    margin: 0;
+}
+
+.js-popup-subscribe .popup-step2 {
+    margin: 40px 56px 99px;
+}
+
+.js-popup-subscribe .popup-step2 .popup-logo {
+    width: 64px;
+    height: 64px;
+    background: url(images/popup-confirm.png) center center no-repeat;
+}
+
+.js-popup-subscribe .clear {
+    clear: both;
+}
+
+.js-popup-subscribe .none {
+    display: none;
+}
+
+@media (max-width: 587px) {
+    .js-popup-subscribe .popup__box {
+        min-width: auto;
+    }
+
+    .js-popup-subscribe .popup-subscribe-coupon {
+        margin: 30px;
+    }
+
+    .js-popup-subscribe .popup-subscribe-coupon .popup-email {
+        width: auto;
+        float: none;
+        margin: 0 0 20px;
+    }
+
+    .js-popup-subscribe .popup-subscribe-coupon .btn__wrap {
+        float: none;
+    }
+
+    .js-popup-subscribe .popup-subscribe-coupon .popup-email .error {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .js-popup-subscribe .popup__box {
+        padding: 22px 10px 0;
+    }
+
+    .js-popup-subscribe .popup-footer {
+        margin: 0 -10px;
+        padding: 19px 15px 17px;
+    }
+
+    .js-popup-subscribe .popup-subscribe-coupon {
+        margin: 30px 10px;
+    }
+
+    .js-popup-subscribe .popup-step2 {
+        margin: 40px 0 0;
+    }
+}
+
+.popup {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 101;
+    -webkit-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    transform: translateX(-100%);
+    -webkit-transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+    transition: all 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.popup.show {
+    -webkit-transform: translateX(0%);
+    -ms-transform: translateX(0%);
+    transform: translateX(0%);
+}
+
+.popup__preload {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../img/loading.svg) no-repeat center center rgba(255, 255, 255, 0.75);
+}
+
+.popup__inner {
+    height: 100%;
+    overflow: auto;
+}
+
+.popup--compact .popup__box {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.popup__box {
+    background: #FFFFFF;
+    position: relative;
+    margin: auto;
+    overflow: auto;
+    width: 100%;
+    height: 100%;
+    padding: 42px 50px 40px;
+}
+
+.popup__box [class*="cross"] {
+    font-size: 23px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    bottom: auto;
+    left: auto;
+    cursor: pointer;
+}
+
+.popup .form .queue {
+    width: 100%;
+}
+
+.popup .form .queue__item {
+    margin-top: 12px;
+}
+
+.popup .form .queue__item:first-child span {
+    font-size: 16px;
+    line-height: 18px;
+}
+
+.popup .form__row + .form__row {
+    margin-top: 22px;
+}
+
+.popup .form__row .radio__list .list__item label {
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+.popup .form__row .radio__list .list__item + .list__item {
+    margin-left: 12px;
+}
+
+.popup .form__row .rating--rect {
+    padding: 18px 0;
+}
+
+.popup .form .btn__wrap {
+    text-align: center;
+}
+
+.popup .form .btn__wrap [type="submit"],
+.popup .form .btn__wrap a.btn {
+    display: inline-block;
+}
+
+.popup .form .btn__wrap [type="submit"],
+.popup .form .btn__wrap a.btn,
+.popup .form .btn__wrap a {
+    margin-bottom: 24px;
+}
+
+.popup .form .btn__wrap [type="submit"]:last-child,
+.popup .form .btn__wrap a.btn:last-child,
+.popup .form .btn__wrap a:last-child {
+    margin-bottom: 0;
+}
+
+.popup .item__list + .form {
+    margin-top: 40px;
+}
+
+.popup table + table {
+    margin-top: 30px;
+}
+
+@media only screen and (min-width: 768px) {
+    .popup {
+        background-color: rgba(0, 0, 0, 0.5);
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all .5s;
+        transition: all .5s;
+    }
+
+    .popup.show {
+        -webkit-transform: none;
+        -ms-transform: none;
+        transform: none;
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .popup.show .popup__inner {
+        -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+        transform: scale(1);
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .popup__inner {
+        text-align: center;
+        padding: 35px 0;
+        -webkit-transform: scale(0.95);
+        -ms-transform: scale(0.95);
+        transform: scale(0.95);
+        visibility: hidden;
+        opacity: 0;
+        -webkit-transition: all 0.3s ease-in-out 0.5s;
+        transition: all 0.3s ease-in-out 0.5s;
+    }
+
+    .popup__inner:before {
+        content: '';
+        display: inline-block;
+        vertical-align: middle;
+        height: 100%;
+        line-height: 100%;
+    }
+
+    .popup__box {
+        display: inline-block;
+        vertical-align: middle;
+        max-width: 668px;
+        height: auto;
+        text-align: left;
+    }
+
+    .popup--compact .popup__box {
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+
+    .popup .form .queue {
+        width: 100%;
+    }
+
+    .popup .form .queue__item {
+        vertical-align: top;
+        padding: 0 5px 0 0;
+        margin-top: 0;
+    }
+
+    .popup .form .queue__item > span {
+        display: inline-block;
+        padding-top: 12px;
+    }
+
+    .popup .form .queue__item + .queue__item {
+        padding: 0 0 0 10px;
+        width: 462px;
+    }
+
+    .popup .form__row + .form__row {
+        margin-top: 22px;
+    }
+
+    .popup .form .btn__wrap {
+        text-align: left;
+    }
+
+    .popup .form .btn__wrap [type="submit"] {
+        max-width: 156px;
+    }
+
+    .popup .form .btn__wrap [type="submit"],
+    .popup .form .btn__wrap a.btn,
+    .popup .form .btn__wrap a {
+        margin: 0 0 0 26px;
+    }
+
+    .popup .form .btn__wrap [type="submit"]:first-child,
+    .popup .form .btn__wrap a.btn:first-child,
+    .popup .form .btn__wrap a:first-child {
+        margin-left: 0;
+    }
+
+    .popup .form .btn__wrap [type="submit"],
+    .popup .form .btn__wrap a.btn {
+        display: inline-block;
+        vertical-align: middle;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .popup__box {
+        max-width: 755px;
+    }
+}
+
+.js-subscribe-popup [type="checkbox"] + label:before {
+    content: '';
+    border: 1px solid #362D2E;
+    width: 15px;
+    height: 15px;
+    position: absolute;
+    top: 4px;
+    right: auto;
+    bottom: auto;
+    left: 5px;
+}
+.js-subscribe-popup [type="checkbox"] + label:after {
+    font: normal normal 8px/1em "tl";
+    content: '\e804';
+    position: absolute;
+    top: 7px;
+    right: auto;
+    bottom: auto;
+    left: 8px;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.1s ease-out;
+    transition: all 0.1s ease-out;
+}

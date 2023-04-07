@@ -1,0 +1,4 @@
+body { height: auto; }
+body.b-page {
+display: block;
+}

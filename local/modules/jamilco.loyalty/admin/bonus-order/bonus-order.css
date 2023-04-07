@@ -1,0 +1,4 @@
+#bonusOrder{ }
+#bonusOrder input[type="text"]{ width: 171px; text-align: center; }
+#bonusOrder .none{ display: none !important; }
+.bx-core-waitwindow{ display: block; position: fixed; font-size: 0px; top: 0px !important; right: 0px; bottom: 0px; left: 0px !important; z-index: 999999; background: rgba(242, 242, 242, 0.5) url(img/loading.gif) center no-repeat; }

@@ -1,0 +1,33 @@
+build:
+  stage: build
+  tags:
+    - layout-builder
+  only:
+    - stage
+  script:
+    - yarn install
+    - yarn run dev
+  artifacts:
+    name: "build"
+    expire_in: 1 week
+    paths:
+      - dev/
+  cache:
+    key: ${CI_COMMIT_REF_SLUG}
+    paths:
+      - node_modules/
+      - yarn.lock
+
+delpoy:
+  stage: deploy
+  variables:
+    SITE_PATH: /web-stage/layout.owstudio.ru/www/juicy/
+    GIT_STRATEGY: none
+  tags:
+    - owstudio.ru
+  only:
+    - stage
+  dependencies:
+    - build
+  script:
+    - rsync --delete --recursive --verbose dev/ $SITE_PATH

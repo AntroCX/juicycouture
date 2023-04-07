@@ -1,0 +1,51 @@
+/* Sale paysystem yandex kassa */
+
+.sale-paysystem-wrapper {
+    position: relative;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 16px;
+    line-height: 1.42857;
+    color: #000;
+}
+.sale-paysystem-error-title {
+    color: #f00;
+}
+.sale-paysystem-error-title,
+.sale-paysystem-error {
+    font-weight: bold;
+}
+.sale-paysystem-description {
+    margin: 0 0 11px 0;
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 14px;
+    color: #777;
+}
+.sale-paysystem-yandex-button {
+    display: inline-block;
+    margin: 26px 0 10px 0;
+}
+.sale-paysystem-yandex-button .sale-paysystem-yandex-button-item {
+    padding: 0 22px;
+    height: 38px;
+    border: 0;
+    background: #da1884 !important;
+    font: bold 16px/35px "PT Sans Narrow", sans-serif;
+    color: #fff;
+    -webkit-transition: background .3s ease;
+    -moz-transition: background .3s ease;
+    transition: background .3s ease;
+}
+.sale-paysystem-yandex-button .sale-paysystem-yandex-button-item:hover {
+    background: #ac1368 !important;
+}
+.sale-paysystem-yandex-button-description {
+    display: block;
+    margin: 0 0 15px 0;
+    font: 14px "PT Sans Narrow", sans-serif;
+    color: #80868e;
+}
+.pay_name {
+    margin-bottom: 10px;
+    font-size: 23px !important;
+    font-weight: bold;
+}

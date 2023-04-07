@@ -1,0 +1,86 @@
+@import "../colors";
+
+.b-faq {
+  &__form {
+    background: $gray-ed;
+    max-width: 700px;
+    margin-bottom: 40px;
+    padding: 10px 20px;
+    @media (min-width: 992px) {
+      padding: 40px 80px;
+    }
+    textarea {
+      resize: none;
+    }
+    .form-require {
+      margin-top: 15px;
+    }
+    .btn {
+      margin-top: 20px;
+    }
+    select {
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+    }
+    .form-select {
+      position: relative;
+      &:before {
+        position: absolute;
+        top: 15px;
+        right: 15px;
+        font-family: FontAwesome;
+        content: "\f107";
+        pointer-events: none;
+      }
+    }
+    &-title {
+      margin-top: 31px;
+      margin-bottom: 30px;
+      font-size: 30px;
+    }
+  }
+  &__questions {
+
+  }
+  .panel {
+    border: none !important;
+    box-shadow: none !important;
+    margin-top: 0px !important;
+  }
+  .panel-title {
+    font-size: 16px;
+    padding: 6px 15px;
+    &:before {
+      font-family: FontAwesome;
+      content: "\f106";
+      float: right;
+      transition: all 0.4s;
+    }
+    &[aria-expanded="false"] {
+      &:before {
+        -webkit-transform: rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        transform: rotate(180deg);
+      }
+    }
+  }
+  .panel + .panel {
+    .panel-heading {
+      border-top: 0px !important;
+    }
+  }
+  .panel-heading {
+    background: none;
+    border-top: 1px solid $gray-cc;
+    border-bottom: 1px solid $gray-cc;
+    padding-left: 0px;
+  }
+  .panel-body {
+    border-bottom: 1px solid $gray-cc !important;
+    border-top: 0px !important;
+  }
+}

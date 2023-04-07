@@ -1,0 +1,26 @@
+@import "../colors";
+
+.b-breadcrumb {
+  &__content {
+    background: none !important;
+    padding: 15px 0px 15px 0px !important;
+    margin-bottom: 0px !important;
+    li {
+      cursor: default;
+      a {
+        color: $black;
+        cursor: pointer;
+        text-decoration: none !important;
+        transition: all 0.4s;
+      }
+      &:hover {
+        a {
+          color: $pink;
+        }
+      }
+      &:before {
+        color: $black !important;
+      }
+    }
+  }
+}

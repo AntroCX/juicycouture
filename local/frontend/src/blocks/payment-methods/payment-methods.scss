@@ -1,0 +1,77 @@
+.payment-methods{
+   padding-top: 20px;
+   padding-bottom: 56px;
+
+   color: #000;
+   font-family: $font-family-pt-sans-narrow;
+   
+   &__title {
+      margin-top: 0;
+      margin-bottom: 20px;
+      
+      font-size: 28px;
+      line-height: 31px;
+      font-weight: 700;
+      text-transform: uppercase;
+   }
+
+   &__subtitle {
+      max-width: 461px;
+      margin-bottom: 40px;
+
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 400;
+   }
+
+   &__desk {
+      margin-bottom: 41px;
+
+      p {
+         font-size: 20px;
+         line-height: 30px;
+         font-weight: 400;
+      }
+   }
+
+   &__method {
+      margin-top: 0;
+      margin-bottom: 12px;
+
+      font-size: 18px;
+      line-height: 26px;
+      font-weight: 700;
+      text-transform: unset;
+   }
+
+   &__content {
+      max-width: 849px;
+
+      &:not(:last-child) {
+         margin-bottom: 20px;
+      }
+   }
+
+   &__cards {
+      margin-top: 11px;
+      @include display-flex($align: center);
+
+      img {
+         &:not(:last-child) {
+            margin-right: 28px;
+         }
+      }
+   }
+
+   &__text {
+      margin-bottom: 12px;
+
+      font-size: 16px;
+      line-height: 22px;
+      font-weight: 400;
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+} 

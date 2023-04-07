@@ -1,0 +1,25 @@
+@import "../colors";
+
+.b-recommendation {
+  &__goods {
+    padding-top: 14px;
+  }
+  &_new {
+    @media (min-width: 768px) {
+      margin-top: 40px;
+    }
+    @media (min-width: 992px) {
+      margin-top: 80px;
+    }
+    .b-section__title-wrapper {
+      border-bottom: 1px solid $gray-e0;
+      margin-bottom: 7px;
+    }
+    .b-section__title {
+      font-size: 30px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding-bottom: 9px;
+    }
+  }
+}

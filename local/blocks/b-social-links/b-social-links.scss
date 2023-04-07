@@ -1,0 +1,75 @@
+@import "../colors";
+
+.b-social-links {
+  text-align: center;
+  width: 100%;
+  margin: 25px auto;
+  @media (min-width: 768px) {
+    max-width: 400px;
+  }
+  @media (min-width: 992px) {
+    max-width: none;
+  }
+  &__second-row {
+    margin: 15px auto 0px auto;
+    @media (min-width: 768px) {
+      max-width: 280px;
+    }
+    @media (min-width: 992px) {
+      max-width: 150px;
+    }
+    @media (min-width: 1200px) {
+      max-width: 220px;
+    }
+  }
+  a {
+    text-decoration: none;
+    &:before {
+      font-family: FontAwesome;
+      font-size: 24px;
+      color: $black;
+      transition: all 0.4s;
+      cursor: pointer;
+    }
+    &:hover {
+      &:before {
+        color: $pink;
+      }
+    }
+  }
+  &__instagram {
+    &:before {
+      content: "\f16d";
+    }
+  }
+  &__facebook {
+    &:before {
+      content: "\f09a";
+    }
+  }
+  &__twitter {
+    &:before {
+      content: "\f099";
+    }
+  }
+  &__youtube {
+    &:before {
+      content: "\f167";
+    }
+  }
+  &__tumblr {
+    &:before {
+      content: "\f173";
+    }
+  }
+  &__gplus {
+    &:before {
+      content: "\f0d5";
+    }
+  }
+  &__pinterest {
+    &:before {
+      content: "\f0d2";
+    }
+  }
+}

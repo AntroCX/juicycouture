@@ -1,0 +1,11 @@
+/bitrix/
+/upload/
+*.txt
+*.log
+.vscode
+*.DS_Store
+*.zip
+*.mp4
+/local/log/
+/local/catalog_feed/
+/api/log/

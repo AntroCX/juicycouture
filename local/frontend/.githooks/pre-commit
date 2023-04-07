@@ -1,0 +1,4 @@
+#!/bin/sh
+
+gulp build
+git add build/

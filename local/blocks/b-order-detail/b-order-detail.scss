@@ -1,0 +1,47 @@
+@import "../colors";
+
+.b-order-detail {
+  margin-bottom: 50px;
+  &__delivery {
+    font-size: 14px;
+  }
+  &__header {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-bottom: 1px solid $gray-cc;
+    padding-bottom: 5px;
+  }
+  &__total {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+  }
+  &__body {
+    margin-bottom: 20px;
+    &-item {
+      padding: 15px 0px;
+      border-bottom: 1px solid $gray-cc;
+      &-props {
+        font-size: 12px;
+      }
+    }
+  }
+  &__number, &__date {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+  &__main-info {
+    background: $gray-ed;
+    padding: 25px 16px;
+    margin: 20px 0px;
+    div {
+      font-size: 15px;
+    }
+    .row {
+      padding-bottom: 15px;
+    }
+  }
+}

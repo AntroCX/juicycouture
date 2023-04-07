@@ -1,0 +1,23 @@
+.section-select{ line-height: 17px; }
+.parent-slide{
+    display: block;
+    float: left;
+    border-radius: 4px;
+    width: 13px;
+    height: 13px;
+    line-height: 13px;
+    text-align: center;
+    font-size: 12px;
+    border: 1px solid transparent;
+    margin: 1px 0 0 0;
+}
+.parent-slide.parent-yes{
+    cursor: pointer;
+    background: url(/bitrix/images/catalog/load/plus.gif) left top no-repeat;
+}
+.parent-slide.parent-yes.parent-opened{
+    background: url(/bitrix/images/catalog/load/minus.gif) left top no-repeat;
+}
+.parent-slide.parent-yes:hover{ background-color: #eee; }
+.child-slide{ padding: 0 0 5px 20px; display: none; }
+.child-slide.child-slide-show{ display: block; }

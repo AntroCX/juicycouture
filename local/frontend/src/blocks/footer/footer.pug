@@ -1,0 +1,111 @@
+footer.b-page__footer
+  .container
+    .b-page__footer-wrapper
+      .row
+        .col-sm-3.col-md-3
+          ul.b-page__footer-menu
+            li.b-page__footer-menu-category
+              a(href='#footer_1' aria-expanded='false') &Zcy;&acy;&kcy;&acy;&zcy;&ycy;
+            li
+              a(href='/reference/shipping-and-payment/') &Dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&acy;
+            li
+              a(href='/reference/return/') &Vcy;&ocy;&zcy;&vcy;&rcy;&acy;&tcy;
+            li
+              a(href='/reference/payment-methods/') &Scy;&pcy;&ocy;&scy;&ocy;&bcy;&ycy; &ocy;&pcy;&lcy;&acy;&tcy;&ycy;
+        .col-sm-3.col-md-3
+          ul.b-page__footer-menu
+            li.b-page__footer-menu-category
+              a(href='#footer_2' aria-expanded='false') &Scy;&pcy;&rcy;&acy;&vcy;&kcy;&acy;
+            li
+              a(href='/about/contacts/') &Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;
+            li
+              a(href='/reference/size-chart/') &Rcy;&acy;&zcy;&mcy;&iecy;&rcy;&ncy;&acy;&yacy; &scy;&iecy;&tcy;&kcy;&acy;
+            li
+              a(href='/about/privilege-card/') &Kcy;&acy;&rcy;&tcy;&acy; &pcy;&rcy;&icy;&vcy;&icy;&lcy;&iecy;&gcy;&icy;&jcy;
+            li
+              a(href='/reference/contract-offer/') &Pcy;&rcy;&acy;&vcy;&ocy;&vcy;&acy;&yacy; &icy;&ncy;&fcy;&ocy;&rcy;&mcy;&acy;&tscy;&icy;&yacy;
+        .col-sm-3.col-md-3
+          ul.b-page__footer-menu
+            li.b-page__footer-menu-category
+              a(href='#footer_3' aria-expanded='false') &Ocy; Juicy Couture
+            li
+              a(href='/about/history/') &Icy;&scy;&tcy;&ocy;&rcy;&icy;&yacy; &bcy;&rcy;&iecy;&ncy;&dcy;&acy;
+            li
+              a(href='/lookbook/') Lookbook
+        .col-sm-12.col-md-3
+          .b-subscription
+            .b-subscription__title &Pcy;&ocy;&dcy;&pcy;&icy;&scy;&acy;&tcy;&softcy;&scy;&yacy; &ncy;&acy; &ncy;&ocy;&vcy;&ocy;&scy;&tcy;&ncy;&ucy;&yucy; &rcy;&acy;&scy;&scy;&ycy;&lcy;&kcy;&ucy;
+            div &Zcy;&acy;&rcy;&iecy;&gcy;&icy;&scy;&tcy;&rcy;&icy;&rcy;&ucy;&jcy;&tcy;&iecy;&scy;&softcy; &scy;&iecy;&jcy;&chcy;&acy;&scy;!
+            #comp_6c4f00385b6d42b8530fddcb2a9747c0
+              #sender-subscribe.bx-subscribe
+                // 'start_frame_cache_sender-subscribe'
+                script.
+                  BX.ready(function()
+                  {
+                  BX.bind(BX("bx_subscribe_btn_sljzMT"), 'click', function() {
+                  setTimeout(mailSender, 250);
+                  return false;
+                  });
+                  });
+                  function mailSender()
+                  {
+                  setTimeout(function() {
+                  var btn = BX("bx_subscribe_btn_sljzMT");
+                  if(btn)
+                  {
+                  var btn_span = btn.querySelector("span");
+                  var btn_subscribe_width = btn_span.style.width;
+                  BX.addClass(btn, "send");
+                  btn_span.outterHTML = "<span><i class='fa fa-check'></i> ГОТОВО</span>";
+                  if(btn_subscribe_width)
+                  btn.querySelector("span").style["min-width"] = btn_subscribe_width+"px";
+                  }
+                  }, 400);
+                  }
+                form.b-subscription__form(role='form' method='post' action='/order/' onsubmit="BX('bx_subscribe_btn_sljzMT').disabled=true;")
+                  input#bxajaxid_6c4f00385b6d42b8530fddcb2a9747c0_8BACKi(type='hidden' name='bxajaxid' value='6c4f00385b6d42b8530fddcb2a9747c0')
+                  input(type='hidden' name='AJAX_CALL' value='Y')
+                  script(type='text/javascript').
+                    function _processform_8BACKi(){
+                    if (BX('bxajaxid_6c4f00385b6d42b8530fddcb2a9747c0_8BACKi'))
+                    {
+                    var obForm = BX('bxajaxid_6c4f00385b6d42b8530fddcb2a9747c0_8BACKi').form;
+                    BX.bind(obForm, 'submit', function() {BX.ajax.submitComponentForm(this, 'comp_6c4f00385b6d42b8530fddcb2a9747c0', true)});
+                    }
+                    BX.removeCustomEvent('onAjaxSuccess', _processform_8BACKi);
+                    }
+                    if (BX('bxajaxid_6c4f00385b6d42b8530fddcb2a9747c0_8BACKi'))
+                    _processform_8BACKi();
+                    else
+                    BX.addCustomEvent('onAjaxSuccess', _processform_8BACKi);
+                  input#sessid(type='hidden' name='sessid' value='3730d7374a58b5009a4ff524cef9b379')
+                  input(type='hidden' name='sender_subscription' value='add')
+                  input.b-subscription__form-email(type='email' name='SENDER_SUBSCRIBE_EMAIL' value='' title='Введите ваш e-mail' placeholder='Введите ваш e-mail')
+                  button#bx_subscribe_btn_sljzMT.b-subscription__form-submit(type='submit')
+                  div(style='margin:0 auto;margin-top:10px; width:100%; max-width:342px; position:relative;font-size:14px;text-transform:lowercase;')
+                    .landing2__label(style='padding-left:30px;text-align:left;')
+                      input.required(type='checkbox' name='SUBSCRIBE_AGREE' style='position:absolute;left:10px;top:0;')
+                      span
+                      |  &yacy; &scy;&ocy;&gcy;&lcy;&acy;&scy;&iecy;&ncy; &scy; &ucy;&scy;&lcy;&ocy;&vcy;&icy;&yacy;&mcy;&icy; 
+                      a(href='/reference/contract-offer/' target='_blank')
+                        | &pcy;&ucy;&bcy;&lcy;&icy;&chcy;&ncy;&ocy;&jcy; &ocy;&fcy;&iecy;&rcy;&tcy;&ycy; &icy; &ocy;&bcy;&rcy;&acy;&bcy;&ocy;&tcy;&kcy;&ocy;&jcy; &mcy;&ocy;&icy;&khcy; &pcy;&iecy;&rcy;&scy;&ocy;&ncy;&acy;&lcy;&softcy;&ncy;&ycy;&khcy; &dcy;&acy;&ncy;&ncy;&ycy;&khcy; &vcy; &pcy;&ocy;&rcy;&yacy;&dcy;&kcy;&iecy;, &pcy;&rcy;&iecy;&dcy;&ucy;&scy;&mcy;&ocy;&tcy;&rcy;&iecy;&ncy;&ncy;&ocy;&mcy; &pcy;&ucy;&bcy;&lcy;&icy;&chcy;&ncy;&ocy;&jcy; &ocy;&fcy;&iecy;&rcy;&tcy;&ocy;&jcy;
+                // 'end_frame_cache_sender-subscribe'
+          .b-social-links
+            .b-social-links__first-row
+              .row
+                .col-xs-3
+                  a.b-social-links__instagram(target='_blank' rel='nofollow' href='https://www.instagram.com/juicycouture_russia/')
+                .col-xs-3
+                  a.b-social-links__facebook(target='_blank' rel='nofollow' href='https://www.facebook.com/JuicyCoutureRussia/')
+                .col-xs-3
+                  a.b-social-links__twitter(target='_blank' rel='nofollow' href='https://twitter.com/juicycouture')
+                .col-xs-3
+                  a.b-social-links__youtube(target='_blank' rel='nofollow' href='https://www.youtube.com/user/juicycouture')
+            .b-social-links__second-row
+              .row
+                .col-xs-4
+                  a.b-social-links__tumblr(target='_blank' rel='nofollow' href='http://juicycouture.tumblr.com/')
+                .col-xs-4
+                  a.b-social-links__gplus(target='_blank' rel='nofollow' href='https://plus.google.com/+JuicyCouture')
+                .col-xs-4
+                  a.b-social-links__pinterest(target='_blank' rel='nofollow' href='https://www.pinterest.com/juicycouturela/')

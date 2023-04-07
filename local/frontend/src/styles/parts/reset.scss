@@ -1,0 +1,221 @@
+body {
+  @include display-flex(column, stretch, stretch);
+  width:                    100%;
+  min-height:               100%;
+  margin:                   0;
+  -webkit-font-smoothing:   antialiased;
+  -moz-osx-font-smoothing:  grayscale;
+  min-width:                320px;
+  text-size-adjust:         none;
+  color:                    $color-text-default;
+  word-break:               break-word;
+  font:                     14px/20px $font-family-default;
+  text-decoration-skip-ink: none;
+}
+
+html,
+body {
+  background: white;
+  width:      100%;
+  min-height: 100vh;
+}
+
+html {
+  background: #f8f8f8;
+}
+
+
+footer,
+header,
+main {
+  position:    relative;
+  font-family: $font-family-default;
+}
+
+main {
+  flex-grow: 1;
+}
+
+// Типографика и блоки
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  color:  inherit;
+}
+
+a {
+  text-decoration:          none;
+  color:                    inherit;
+  outline:                  none;
+  text-decoration-skip-ink: none;
+  transition-property:      color, border-color;
+  transition-duration:      $transition-hover-off;
+
+  svg {
+    transition-property: fill, stroke;
+    transition-duration: $transition-hover-off;
+  }
+
+  @include hover {
+    transition-duration: $transition-hover-on;
+
+    svg {
+      transition-duration: $transition-hover-on;
+    }
+  }
+
+  @include focus {
+    transition-duration: $transition-hover-on;
+
+    svg {
+      transition-duration: $transition-hover-on;
+    }
+  }
+
+  &:active {
+    transition-duration: $transition-hover-on;
+
+    svg {
+      transition-duration: $transition-hover-on;
+    }
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing:  0;
+}
+
+ul,
+ol,
+dl {
+  margin:     0;
+  padding:    0;
+  list-style: none;
+}
+
+dd {
+  margin: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+// Интерактив и пользовательский ввод
+
+a,
+button,
+label {
+  // Подсветка при тапе
+  -webkit-touch-callout:       none;
+  -webkit-user-select:         none;
+  -khtml-user-select:          none;
+  -moz-user-select:            none;
+  -ms-user-select:             none;
+  user-select:                 none;
+  -webkit-tap-highlight-color: transparent;
+  cursor:                      pointer;
+}
+
+button,
+input,
+textarea,
+select {
+  color:                       inherit;
+  font-family:                 inherit;
+  margin:                      0;
+  padding:                     0;
+  background:                  none;
+  border:                      none;
+  border-radius:               0;
+  outline:                     none;
+  -webkit-appearance:          none;
+  -moz-appearance:             none;
+  cursor:                      pointer;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+button {
+  outline:    initial;
+  transition: color $transition-hover-off;
+
+  svg {
+    transition: fill $transition-hover-off;
+  }
+
+  @include hover() {
+    transition: color $transition-hover-on;
+
+    svg {
+      transition: fill $transition-hover-on;
+    }
+  }
+}
+
+textarea {
+  display: block;
+  resize:  none;
+}
+
+select::-ms-expand {display: none;}
+
+input::-ms-clear {display: none;}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+
+  &::-webkit-inner-spin-button,
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin:             0;
+  }
+}
+
+hr {
+  border: none;
+  margin: 0;
+  height: 1px;
+}
+
+main,
+.header,
+.footer {
+  img,
+  svg {
+    display: block;
+  }
+}
+
+// Пытаемся прятать подсветку автозаполнения полей
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  background: none !important;
+  transition: background-color 999s, color 999s !important;;
+}
+
+input[type=date]::-webkit-calendar-picker-indicator,
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button,
+input::-webkit-clear-button {
+  -webkit-appearance: none;
+  display:            none;
+  margin:             0;
+}

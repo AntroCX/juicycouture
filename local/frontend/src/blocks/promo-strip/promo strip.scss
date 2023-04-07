@@ -1,0 +1,51 @@
+.promo-strip {
+   height: 38px;
+   background-color: #000000;
+
+   &__item {
+      @include display-flex(row, center, center)
+   }
+
+   &__link {
+      margin: 0;
+
+      font: 16px/22px $font-family-pt-sans-narrow;
+      color: #ffffff;
+      text-align: center;
+
+      @include hover {
+         color: #ffffff;
+         text-decoration: none;
+      }
+   }
+
+   .swiper-button-prev,
+   .swiper-button-next {
+      width: 30px;
+      height: 20px;
+      margin-top: 0;
+
+      transform: translateY(-50%);  
+   }
+
+   .swiper-button-prev {
+      left: 0;
+
+      @include w-from($screen-md) {
+         left: 17px;
+      }
+   }
+
+   .swiper-button-next {
+      right: 0;
+
+      @include w-from($screen-md) {
+         right: 17px;
+      }
+   }
+
+   .swiper-button-prev::after, .swiper-button-next::after {
+      content: "";
+      display: none;
+   }
+}

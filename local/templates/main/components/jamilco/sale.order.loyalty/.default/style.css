@@ -1,0 +1,42 @@
+.loyalty-popup {}
+.loyalty-popup .modal-body {
+    margin-top: 10px !important;
+}
+.loyalty-popup__send-code-action {
+    margin-top: 20px;
+    text-align: center;
+}
+.loyalty-popup .btn-wide {
+    width: 49%;
+}
+.nobr {
+    white-space: nowrap;
+}
+.loyalty-popup__confirm-code {}
+.loyalty-popup__confirm-code-input {
+    display: inline-block !important;
+    width: 50% !important;
+}
+.loyalty-popup__confirm-code .loyalty-popup__confirm-code-input{
+    border-color: #ccc;
+    vertical-align: middle;
+}
+.b-order-basket__side-bonus-apply {
+    margin: 10px 20px;
+}
+.loyalty-popup__confirm-success {
+    padding: 30px 0;
+    text-align: center;
+}
+.loyalty-popup__send-code-confirm,
+.js-loyalty-confirm-error,
+.js-loyalty-confirm-ok,
+.js-loyalty-confirm-email,
+.js-loyalty-confirm-phone {
+    display: none;
+}
+
+.b-loyalty .js-loyalty-card-input{
+    border: 1px solid #000;
+    padding-left: 13px;
+}

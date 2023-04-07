@@ -1,0 +1,121 @@
+@import "../colors";
+
+.b-reviews {
+  &__line {
+    &-title {
+      font-weight: bold;
+      text-transform: uppercase;
+      padding-bottom: 4px;
+    }
+    &-rating {
+      margin-bottom: 20px;
+      &:first-child {
+        margin-top: 27px;
+      }
+      &-score {
+        height: 8px;
+        &-item {
+          display: block;
+          float: left;
+          width: 45px;
+          height: 8px;
+          background: $pink;
+          border-right: 1px solid $pink-dark;
+          border-left: 1px solid $white;
+          &:first-child {
+            border-left: 0px;
+            border-top-left-radius: 2px;
+            border-bottom-left-radius: 2px;
+          }
+          &:last-child {
+            border-top-right-radius: 2px;
+            border-bottom-right-radius: 2px;
+          }
+        }
+      }
+    }
+  }
+  &__header {
+    margin-top: 25px;
+    margin-bottom: 20px;
+  }
+  &__count {
+    padding-top: 20px;
+    @media (max-width: 320px) {
+      padding-top: 10px;
+    }
+  }
+  &__user-image {
+    width: 48px;
+    height: 48px;
+    background: url(data:image/png;base64,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) no-repeat;
+    background-size: cover !important;
+  }
+  &__btn-write {
+    @media (max-width: 320px) {
+      font-size: 12px !important;
+      padding: 10px !important;
+    }
+  }
+  &__item {
+    margin-bottom: 70px;
+    &-rating {
+      margin-top: 30px;
+      &-selector {
+        background: $gray-e7;
+        padding: 5px 10px;
+        margin-left: 10px;
+        border-radius: 15px;
+        &-delimiter {
+          padding: 0 7px;
+        }
+        &-yes {
+          padding-right: 4px;
+          cursor: pointer;
+          &:after {
+            font-family: FontAwesome;
+            content: "\f111";
+            font-size: 3px;
+            vertical-align: middle;
+            padding-left: 5px;
+          }
+        }
+        &-no {
+          padding-right: 4px;
+          cursor: pointer;
+          &:after {
+            font-family: FontAwesome;
+            content: "\f111";
+            font-size: 3px;
+            vertical-align: middle;
+            padding-left: 5px;
+          }
+        }
+      }
+    }
+    &-text {
+      padding-top: 15px;
+    }
+    &-title {
+      text-transform: uppercase;
+      font-size: 15px;
+      padding-top: 5px;
+    }
+    &-date {
+      margin-left: 5px;
+      font-weight: bold;
+    }
+    &-stars {
+      display: inline-block;
+      margin-right: 20px;
+      &-item {
+        display: inline-block;
+        font-family: FontAwesome;
+        &:before {
+          content: "\f005";
+          color: $yellow;
+        }
+      }
+    }
+  }
+}

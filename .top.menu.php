@@ -1,0 +1,25 @@
+<?
+$aMenuLinks = Array(
+	Array(
+		"", 
+		"", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"Новинки", 
+		"/new/", 
+		Array(), 
+		Array(), 
+		"" 
+	),
+	Array(
+		"SALE", 
+		"/sale/", 
+		Array(), 
+		Array("SEL"=>"Y"), 
+		"" 
+	)
+);
+?>

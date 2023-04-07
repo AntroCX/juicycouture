@@ -1,0 +1,37 @@
+.basket-empty {
+   @include display-flex(column, center, center);
+   min-height: 182px;
+
+   @include w-from($screen-md) {
+      min-height: 379px;
+   }
+
+   &__title {
+      margin-bottom: 26px;
+
+      font: 700 30px/31px $font-family-pt-sans-narrow;
+      text-transform: unset;
+      color: #000;
+   }
+
+   &__link {
+      @include display-flex($align: center, $justify: center);
+
+      width: 152px;
+      height: 52px;
+
+      background: #000;
+
+      font: 700 16px/22px $font-family-pt-sans-narrow;
+      text-transform: uppercase;
+      color: #fff;
+
+      @include hover {
+         background-color: #363636;
+         border-color: #363636;
+         
+         text-decoration: none;
+         color: #fff;
+      }
+   }
+}

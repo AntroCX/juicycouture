@@ -1,0 +1,36 @@
+/*
+  global color for website
+*/
+.b-mainpage-video {
+  background-color: black;
+  background-size: cover; }
+  .b-mainpage-video__title {
+    font-size: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 23px;
+    display: none; }
+  .b-mainpage-video__description {
+    font-family: Georgia;
+    font-style: italic;
+    text-align: center;
+    text-transform: uppercase;
+    max-width: 550px;
+    margin: auto;
+    padding-bottom: 25px;
+    display: none; }
+  .b-mainpage-video__youtube {
+    text-align: center; }
+    .b-mainpage-video__youtube iframe {
+      width: 100%; }
+      @media (min-width: 768px) {
+        .b-mainpage-video__youtube iframe {
+          width: 724px;
+          height: 400px; } }
+      @media (min-width: 992px) {
+        .b-mainpage-video__youtube iframe {
+          width: 960px;
+          height: 540px; } }
+
+/*# sourceMappingURL=b-mainpage-video.css.map */

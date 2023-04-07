@@ -1,0 +1,106 @@
+.bx-ss-icon {
+    background-image:url('/bitrix/js/socialservices/css/icons_v5.png');
+    width: 16px;
+    height: 16px;
+    background-repeat: no-repeat;
+}
+.openid {background-position:0px -192px;}
+.yandex {background-position:0px 0px;}
+.openid-mail-ru {background-position:0px -48px;}
+.livejournal {background-position:0px -16px;}
+.liveinternet {background-position:0px -128px;}
+.blogger {background-position:0px -144px;}
+.rambler {background-position:0px -160px;}
+.liveid {background-position:0px -176px;}
+.mymailru {background-position:0px -64px;}
+.bitrix24 {background-position:0px -378px}
+.dropbox {background-position:0px -504px}
+.box {background-position:0px -520px}
+.office365 {background-position:0px -559px}
+
+tr.soc-serv-header {
+    color: grey;
+    font-weight: lighter;
+    font-size: 85%;
+}
+td.split-item-actions a.split-delete-item {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    vertical-align: middle;
+}
+td.split-item-actions a.split-delete-item, .ttt {
+    width: 15px;
+    height: 15px;
+    background: url(data:image/gif;base64,R0lGODlhDwAPAIEAANDSz66zst3e3f///yH/C05FVFNDQVBFMi4wAwEBAAAh+QQAAAAAACwAAAAADwAPAAAIMgAHCBxIsKDBgwgTKkwYQMBAAQEQQnQ4MSFEAA0XYgSw8GJGiRkrHvw4AOLCkyhTpgwIADs=);
+}
+td.split-item-actions a.split-delete-item:hover, .ttt:hover {
+    background: url(data:image/gif;base64,R0lGODlhDwAPAIMAAOzKyuiKiuVOTvTW1uMwMOd1dfGZmeAAAP///wAAAAAAAAAAAAAAAAAAAAAAAAAAACH/C05FVFNDQVBFMi4wAwEBAAAh+QQAAAAAACwAAAAADwAPAAAIawARCBxIsCBBAAUIKCwwwCCCAAciSjxgoGCBiRgrCgQQEYEBiRUjNkRwkaJHkx8PFBBIACSChikPEBCIseGAiTMRtIxYEabEnAJ4nqyYciUCjgdOChU5sCTGiAEKQnyqsSBCAQQEMHTIlWBAADs=) no-repeat;
+}
+div.soc-serv-accounts {
+    padding: 4px;
+    color: grey;
+    font-weight: lighter;
+}
+div.soc-serv-accounts table {
+    width: 100%;
+    max-width: 300px;
+    margin: 0 auto;
+}
+div.soc-serv-accounts td.soc-serv-name {
+    padding-right: 5px;
+    color: black;
+}
+div.soc-serv-title {
+    margin: 20px 0 0;
+    font-size: 14px;
+    text-align: center;
+    color: grey;
+}
+div.soc-serv-title-grey {
+    max-width: 350px;
+    margin: 0 auto 10px auto;
+    padding: 0 20px;
+    color: grey;
+    font-weight: lighter;
+    font-size: 13px;
+    text-align: center;
+}
+a.soc-serv-link:hover {
+    color: #d00;
+}
+div.soc-serv-main tr.soc-serv-personal td.bx-ss-icons {
+    padding: 9px !important;
+}
+
+i.soc-serv-photo {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    vertical-align:-60%;
+}
+i.soc-serv-text {
+    font-style: normal;
+    vertical-align: -43%;
+}
+td.bx-ss-icons i.bx-ss-icon {
+    width: 16px;
+    height: 16px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -2px;
+}
+div#bx_sonet_fieldset_SOCSERV  td.bx-sonet-profile-fieldcaption {
+    display: none;
+}
+.bx-sonet-profile-edit-layout div.bx-sonet-profile-edit-layers table.bx-sonet-profile-fieldset-table td.bx-sonet-profile-field  {
+    padding-left: 35px;
+}
+.bx-auth input[type|="text"] {
+    width: 25% !important;
+}
+.soc-serv-main {
+    max-width: 600px;
+    margin: 20px auto 0 auto;
+    text-align: center;
+}

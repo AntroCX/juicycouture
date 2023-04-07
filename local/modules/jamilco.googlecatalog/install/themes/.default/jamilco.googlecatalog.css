@@ -1,0 +1,14 @@
+/*Menu icon*/
+.jamilco_googlecatalog_menu_icon {background: url('icons/jamilco.googlecatalog/google-icon.png') no-repeat center center;}
+.chk-ok {
+    background: url(/bitrix/themes/.default/images/checklist/checklist-sprite.png) no-repeat 0 -123px;
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+}
+.chk-fail {
+    background: url(/bitrix/themes/.default/images/checklist/checklist-sprite.png) no-repeat 0 -110px;
+    display: inline-block;
+    width: 20px;
+    height: 12px;
+}

@@ -1,0 +1,160 @@
+.innova_instagram_item {
+	width: 400px;
+	height: 400px;
+	transform: none;
+    opacity: 1;
+    float: none;
+    display: inline-block;
+    position: relative;
+    top: initial;
+    left: initial;
+    vertical-align: top;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+.innova_instagram_item_image img {
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+	width: 102% !important;
+	height: auto;
+	-webkit-transition: all 700ms ease;
+    transition: all 700ms ease;
+    z-index: 0;
+	-webkit-backface-visibility: hidden;
+}
+
+.innova_instagram_item_image img.is-height {
+    height: 102% !important;
+    width: auto !important;
+}
+
+.innova_instagram_item:hover .innova_instagram_item_image img {
+    -webkit-transform: perspective(500px) scale3d(1.15, 1.15, 1) rotateZ(3deg) translate(-50%, -50%);
+    transform: perspective(500px) scale3d(1.1, 1.1, 1) rotateZ(3deg) translate(-50%, -50%);
+}
+.innova_instagram_item_image .innova_instagram_item_video {
+	display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0.6em;
+    right: 0.6em;
+    width: 1.8em;
+    height: 1.8em;
+    transition: all 0.3s ease;
+}
+.innova_instagram_item_image .innova_instagram_item_video svg {
+	fill: #fff;
+}
+.innova_instagram_item:hover .innova_instagram_item_image .innova_instagram_item_video {
+	opacity: 0;
+}
+.innova_instagram_item_information {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
+    opacity: 0;
+    -webkit-transition: opacity 0.4s ease;
+    transition: opacity 0.4s ease;
+    z-index: 2;
+}
+.innova_instagram_item_information_text {
+	font-size: 14px;
+    line-height: 20px;
+	height: calc(93% - 55px);
+	color: #fff;
+    word-wrap: break-word;
+	z-index: 1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	margin: 7% 7% 45px;
+}
+.innova_instagram_item_information_text a {
+	color: rgb(89, 211, 243) !important;
+}
+.innova_instagram_item_information_text a:hover {
+	color: rgb(89, 211, 243) !important;
+	text-decoration: underline !important;
+}
+.innova_instagram_item:hover .innova_instagram_item_information {
+    opacity: 1;
+}
+.innova_instagram_item_information_bar {
+	position: absolute;
+    width: 100%;
+    bottom: 0;
+    z-index: 100;
+	color: rgb(241, 239, 240) !important;
+	margin: 0;
+    border-top: 1px solid rgba(229,226,220,0.4);
+    padding: 10px 7%;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 21px;
+    height: 44px;
+    text-align: left;
+    clear: both;
+    box-sizing: border-box;
+	display: flex;
+    justify-content: center;
+}
+.innova_instagram_overlay {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+.innova_instagram_item_information_bar_likes, .innova_instagram_item_information_bar_comments {
+	margin: 0 10px;
+	font-size: 16px;
+	display: flex;
+}
+.innova_instagram_item_information_bar_likes span, .innova_instagram_item_information_bar_comments span {
+	line-height: 24px;
+    margin-left: 10px;
+    display: block;
+}
+.innova_instagram_item_information_bar_likes svg {
+    width: 24px;
+    height: 24px;
+	fill: currentColor;
+}
+.innova_instagram_item_information_bar_comments svg {
+    width: 24px;
+    height: 24px;
+	fill: currentColor;
+}
+.wa-mediabox-container video {
+	max-width: 100%;
+    cursor: pointer;
+}
+.wa-mediabox-video-btn {
+	position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.wa-mediabox-video-btn svg {
+	height: 40px;
+}
+.wa-mediabox-video-btn-pause {
+	display:none;
+	opacity: 0;
+}
+.wa-mediabox-video-btn:hover .wa-mediabox-video-btn-pause{
+	opacity: 1;
+}

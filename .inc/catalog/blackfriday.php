@@ -1,0 +1,1 @@
+<img src="/upload/banners/1800.jpg" style="width: 100%; height: auto;">

@@ -1,0 +1,58 @@
+@import "../colors";
+
+.b-lookbook {
+  margin-top: 20px;
+  margin-bottom: 80px;
+  &__modal {
+    .modal-title {
+      font-size: 16px;
+      a {
+        margin-left: 20px;
+        color: $black;
+        cursor: pointer;
+        transition: all 0.4s;
+        &:hover {
+          color: $pink;
+        }
+      }
+    }
+  }
+  &__item {
+    cursor: pointer;
+    overflow: hidden;
+    max-height: 300px;
+    @media (min-width: 768px) {
+      max-height: 310px;
+    }
+    @media (min-width: 992px) {
+      max-height: 400px;
+    }
+    @media (min-width: 1200px) {
+      max-height: 490px;
+    }
+    img {
+      width: 100%;
+      height: auto;
+      -webkit-transform: translate3d(0, 0, 0) scale(1.05);
+      -moz-transform: translate3d(0, 0, 0) scale(1.05);
+      -ms-transform: translate3d(0, 0, 0) scale(1.05);
+      -o-transform: translate3d(0, 0, 0) scale(1.05);
+      transform: translate3d(0, 0, 0) scale(1.05);
+      transition: all 0.4s;
+    }
+    &:hover {
+      img {
+        -webkit-transform: translate3d(0, 0, 0) scale(1);
+        -moz-transform: translate3d(0, 0, 0) scale(1);
+        -ms-transform: translate3d(0, 0, 0) scale(1);
+        -o-transform: translate3d(0, 0, 0) scale(1);
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+    }
+  }
+}
+
+.b-recommendation__goods {
+  overflow: hidden;
+  max-height: 370px;
+}

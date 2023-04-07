@@ -1,0 +1,345 @@
+extends templates/main
+
+block container
+  .container
+    a(name='order_form')
+    h1.h1 &Ocy;&fcy;&ocy;&rcy;&mcy;&lcy;&iecy;&ncy;&icy;&iecy; &zcy;&acy;&kcy;&acy;&zcy;&acy;
+    #order_form_div.b-order
+      noscript
+        .errortext
+          | &Dcy;&lcy;&yacy; &ocy;&fcy;&ocy;&rcy;&mcy;&lcy;&iecy;&ncy;&icy;&yacy; &zcy;&acy;&kcy;&acy;&zcy;&acy; &ncy;&iecy;&ocy;&bcy;&khcy;&ocy;&dcy;&icy;&mcy;&ocy; &vcy;&kcy;&lcy;&yucy;&chcy;&icy;&tcy;&softcy; JavaScript. &Pcy;&ocy;-&vcy;&icy;&dcy;&icy;&mcy;&ocy;&mcy;&ucy;, JavaScript &lcy;&icy;&bcy;&ocy; &ncy;&iecy; &pcy;&ocy;&dcy;&dcy;&iecy;&rcy;&zhcy;&icy;&vcy;&acy;&iecy;&tcy;&scy;&yacy; &bcy;&rcy;&acy;&ucy;&zcy;&iecy;&rcy;&ocy;&mcy;, &lcy;&icy;&bcy;&ocy; &ocy;&tcy;&kcy;&lcy;&yucy;&chcy;&iecy;&ncy;. &Icy;&zcy;&mcy;&iecy;&ncy;&icy;&tcy;&iecy; &ncy;&acy;&scy;&tcy;&rcy;&ocy;&jcy;&kcy;&icy; &bcy;&rcy;&acy;&ucy;&zcy;&iecy;&rcy;&acy; &icy; &zcy;&acy;&tcy;&iecy;&mcy;
+          a(href='') &pcy;&ocy;&vcy;&tcy;&ocy;&rcy;&icy;&tcy;&iecy; &pcy;&ocy;&pcy;&ycy;&tcy;&kcy;&ucy;
+          | .
+      .bx_order_make.row
+        form#ORDER_FORM(action='/order/' method='POST' name='ORDER_FORM' enctype='multipart/form-data' novalidate='novalidate')
+          input#sessid(type='hidden' name='sessid' value='b01e7d7a1981220f4c7d82f9557bb40c')
+          #order_form_content
+            .col-sm-5.basket-col
+              .b-order__block
+                .b-order__block-title
+                  h4 &Kcy;&ocy;&rcy;&zcy;&icy;&ncy;&acy;
+                .b-order__block-body
+                  .bx_ordercart.b-order__basket
+                    .bx_ordercart_order_table_container
+                      input#sessid_1(type='hidden' name='sessid' value='b01e7d7a1981220f4c7d82f9557bb40c')
+                      .b-order__basket-item(data-id='1600520' data-price='8500' data-baseprice='8500' data-loyalty='0' data-quantity='1')
+                        .row
+                          .col-xs-4.text-center
+                            img(width='100%' src='https://juicycouture.ru/upload/iblock/e68/e68d1667c8c9da7118d374e3238181f4.jpg')
+                          .col-xs-8
+                            .b-order__basket-item-name
+                              | JCAPB199/101XS
+                            .b-order__basket-item-price
+                              span.price-base 8 500 &#x20BD;
+                            .b-order__basket-item-stock
+                              | &Ncy;&acy; &scy;&kcy;&lcy;&acy;&dcy;&iecy;
+                            .b-order__basket-item-menu
+                              a.b-order__basket-item-delete.black(data-id='1600520' data-product-id='48740') &Ucy;&dcy;&acy;&lcy;&icy;&tcy;&softcy;
+                            .b-order__basket-item-params
+                              .b-order__basket-item-params-item.text-center
+                                div &Rcy;&acy;&zcy;&mcy;&iecy;&rcy;
+                                a.black
+                                  | XS
+                              .b-order__basket-item-params-item.text-center
+                                div &Kcy;&ocy;&lcy;-&vcy;&ocy;
+                                a.black 1
+                .b-order-basket__side-delivery-notes
+                  .b-order-basket__side-delivery-notes-title
+                    | &Vcy;&ycy; &vcy;&ycy;&bcy;&rcy;&acy;&lcy;&icy;:
+                  .b-order-basket__side-delivery-notes-text
+                    span.delivery-price(data-price='400') &Dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&acy;: &Kcy;&ucy;&rcy;&softcy;&iecy;&rcy;&ocy;&mcy;, +400 &#x20BD;
+                    span.gray.js-cart-address(style='display: block;')
+                    span.gray(style='display: block;')
+                    span &Ocy;&pcy;&lcy;&acy;&tcy;&acy;:
+                    span.gray.js-cart-delivery &Ncy;&acy;&lcy;&icy;&chcy;&ncy;&ycy;&mcy;&icy;
+                  .b-order-basket__side-delivery-notes-no_delivery.hidden
+                    | &Ncy;&iecy; &vcy;&scy;&iecy; &tcy;&ocy;&vcy;&acy;&rcy;&ycy; &mcy;&ocy;&gcy;&ucy;&tcy; &bcy;&ycy;&tcy;&softcy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&lcy;&iecy;&ncy;&ycy; &vcy;&ycy;&bcy;&rcy;&acy;&ncy;&ncy;&ycy;&mcy; &scy;&pcy;&ocy;&scy;&ocy;&bcy;&ocy;&mcy;!
+              .bx_ordercart_order_pay.b-order__block
+                .b-order__block-title
+                  h4 &Vcy;&acy;&shcy; &zcy;&acy;&kcy;&acy;&zcy;
+                .bx_ordercart_order_pay_right.b-order__block-body.b-order__info-wrapper
+                  .bx_ordercart_order_sum.b-order__info
+                    .row
+                      .col-xs-6.b-order__info-bold
+                        | &Scy;&ucy;&mcy;&mcy;&acy; &zcy;&acy;&kcy;&acy;&zcy;&acy;
+                      .col-xs-6.text-right.b-order__info-bold
+                        | 8 500 &#x20BD;
+                      .col-xs-6
+                        | &Dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&acy;
+                      #totalDelivery.col-xs-6.text-right.b-order__info-pink
+                        | +400 &#x20BD;
+                  .b-order__info-total
+                    .row.checkout__total_discount-info
+                      .col-xs-6
+                        input#onlineDiscountCheckbox.checkbox(type='checkbox')
+                        label(for='onlineDiscountCheckbox') &Ocy;&pcy;&lcy;&acy;&tcy;&icy;&tcy;&softcy; &ocy;&ncy;&lcy;&acy;&jcy;&ncy;
+                        span#payOnlineHelp(href='#' data-original-title='' title='') ?
+                        #payOnlineHelpText.hidden
+                          h3 &Scy;&kcy;&icy;&dcy;&kcy;&acy; 3% &pcy;&rcy;&icy; &ocy;&pcy;&lcy;&acy;&tcy;&iecy; &ocy;&ncy;&lcy;&acy;&jcy;&ncy;!
+                          ol
+                            li &Dcy;&iecy;&jcy;&scy;&tcy;&vcy;&ucy;&iecy;&tcy; &pcy;&rcy;&icy; &vcy;&ycy;&bcy;&rcy;&acy;&ncy;&ncy;&ocy;&mcy; &scy;&pcy;&ocy;&scy;&ocy;&bcy;&iecy; &quot;&Ocy;&pcy;&lcy;&acy;&tcy;&acy; &ocy;&ncy;&lcy;&acy;&jcy;&ncy;&quot;
+                            li &Rcy;&acy;&scy;&scy;&chcy;&icy;&tcy;&ycy;&vcy;&acy;&iecy;&tcy;&scy;&yacy; &acy;&vcy;&tcy;&ocy;&mcy;&acy;&tcy;&icy;&chcy;&iecy;&scy;&kcy;&icy;
+                            li
+                              | &Dcy;&iecy;&jcy;&scy;&tcy;&vcy;&ucy;&iecy;&tcy; &dcy;&lcy;&yacy; &scy;&pcy;&ocy;&scy;&ocy;&bcy;&ocy;&vcy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy;:
+                              ul
+                                li
+                                  span &Dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&acy; &kcy;&ucy;&rcy;&softcy;&iecy;&rcy;&ocy;&mcy;
+                                li
+                                  span &Zcy;&acy;&bcy;&rcy;&acy;&tcy;&softcy; &vcy; &pcy;&ucy;&ncy;&kcy;&tcy;&iecy; &vcy;&ycy;&dcy;&acy;&chcy;&icy;
+                      .col-xs-6.checkout__total_discount-info-value
+                        | &Vcy;&ycy;&gcy;&ocy;&dcy;&acy;:
+                        span#discount-info-value.checkout__total_discount-info-value-price
+                          | 255 &#x20BD;
+                    .row
+                      .col-xs-6
+                        | &Vcy;&scy;&iecy;&gcy;&ocy;
+                      #totalPrice.col-xs-6.text-right 8 900 &#x20BD;
+                  .b-order__promo-code.mobile-hidden-form
+                    .b-order__promo-code-title.hidden-block-title &Ucy; &vcy;&acy;&scy; &iecy;&scy;&tcy;&softcy; &pcy;&rcy;&ocy;&mcy;&ocy;-&kcy;&ocy;&dcy;?
+                    .row
+                      .col-xs-6.col-lg-8
+                        input.b-order__promo-code-input(name='COUPON' value='' type='text' placeholder='Промо-код')
+                      .col-xs-6.col-lg-4
+                        button.btn.btn-default.btn-block.btn-set-coupon &Pcy;&rcy;&icy;&mcy;&iecy;&ncy;&icy;&tcy;&softcy;
+                  .b-order__bonus-card.b-loyalty.mobile-hidden-form
+                    .b-order__bonus-card-title.hidden-block-title &Ucy; &Vcy;&acy;&scy; &iecy;&scy;&tcy;&softcy; &bcy;&ocy;&ncy;&ucy;&scy;&ncy;&acy;&yacy; &kcy;&acy;&rcy;&tcy;&acy;?
+                    .b-order__bonus-card-fields.b-loyalty__content
+                      .form-group.js-loyalty-form.row(data-handler='/local/components/jamilco/sale.order.loyalty')
+                        input#sessid_2(type='hidden' name='sessid' value='b01e7d7a1981220f4c7d82f9557bb40c')
+                        .col-xs-6.col-lg-8
+                          input.form-control.js-loyalty-card-input(type='text' maxlength='13' placeholder='Номер бонусной карты' name='loyaltyCardNumber' value='')
+                        .col-xs-6.col-lg-4
+                          button.btn.btn-default.btn-block.js-loyalty-submit &Pcy;&rcy;&icy;&mcy;&iecy;&ncy;&icy;&tcy;&softcy;
+                      #bonusError.b-order-basket__side-bonus-result.hidden
+                      .b-loyalty__content-info
+
+            .col-sm-7
+              .b-order__block
+                .b-order__block-title
+                  h4 &Ocy;&fcy;&ocy;&rcy;&mcy;&lcy;&iecy;&ncy;&icy;&iecy; &zcy;&acy;&kcy;&acy;&zcy;&acy;
+                .b-order__block-body.b-order__props
+                  span(style='display:none;')
+                    input(type='text' name='PERSON_TYPE' value='1')
+                    input(type='text' name='PERSON_TYPE_OLD' value='1')
+                  .section
+                  .bx_section
+                    .b-order__block-message.text-right
+                      span.pink *
+                      |  &pcy;&ocy;&lcy;&yacy; &ocy;&bcy;&yacy;&zcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &dcy;&lcy;&yacy; &zcy;&acy;&pcy;&ocy;&lcy;&ncy;&iecy;&ncy;&icy;&yacy;
+                    input#showProps(type='hidden' name='showProps' value='N')
+                    #sale_order_props
+                      .b-order__props-user
+                        .row
+                          .col-sm-6
+                            .form-group
+                              div(data-property-id-row='1')
+                                .bx_block.r3x1
+                                  input#ORDER_PROP_1.form-control(type='text' maxlength='250' size='' value='' name='ORDER_PROP_1' placeholder='* Имя')
+                          .col-sm-6
+                            .form-group
+                              div(data-property-id-row='2')
+                                .bx_block.r3x1
+                                  input#ORDER_PROP_2.form-control(type='text' maxlength='250' size='' value='' name='ORDER_PROP_2' placeholder=' Фамилия')
+                        .row
+                          .col-sm-6
+                            .form-group
+                              div(data-property-id-row='4')
+                                .bx_block.r3x1
+                                  input#ORDER_PROP_4.form-control.mask-phone(type='tel' maxlength='250' size='' value='' name='ORDER_PROP_4' placeholder='* Телефон')
+                          .col-sm-6
+                            .form-group
+                              div(data-property-id-row='3')
+                                .bx_block.r3x1
+                                  input#ORDER_PROP_3.form-control(type='email' maxlength='250' size='' value='' name='ORDER_PROP_3' placeholder='* E-mail')
+                          input#ORDER_PROP_31(type='hidden' name='ORDER_PROP_31' value='')
+                        .row
+                          input#ORDER_PROP_9(type='hidden' name='ORDER_PROP_9' value='')
+                          .col-sm-12.location
+                            label &Gcy;&ocy;&rcy;&ocy;&dcy;
+                            input#ORDER_PROP_5(type='hidden' value='657' name='ORDER_PROP_5')
+                            span.b-header__top-location-city.btn(data-toggle='modal' data-target='#b-city-popup') &Dcy;&ucy;&bcy;&ncy;&acy;
+                  .b-order__props-delivery
+                    .b-order__props-delivery-title &Scy;&pcy;&ocy;&scy;&ocy;&bcy; &pcy;&ocy;&lcy;&ucy;&chcy;&iecy;&ncy;&icy;&yacy;
+                    input#BUYER_STORE(type='hidden' name='BUYER_STORE' value='0')
+                    .bx_section
+                      .btn-group(data-toggle='buttons')
+                        label.bx_element.btn.btn-radio.delivery-button.active(for='ID_DELIVERY_ID_22')
+                          input#ID_DELIVERY_ID_22(type='radio' name='DELIVERY_ID' value='22' checked='')
+                          div(data-delivery='400') &Kcy;&ucy;&rcy;&softcy;&iecy;&rcy;&ocy;&mcy;
+                          table.delivery_extra_services
+                          .clear
+                        .clearfix
+                        .delivery-blocks
+                          input#ORDER_PROP_6(type='hidden' name='ORDER_PROP_6' value='')
+                          .delivery-block.active
+                            .delivery-courier
+                              .row.delivery-period(style='margin-bottom: 15px;')
+                                .col-sm-4.col-md-4
+                                  .form__row_label &Scy;&rcy;&ocy;&kcy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy;
+                                .col-sm-4.col-md-4
+                                  .form__row_label.dayFormat 11.12.21
+                              .delivery-courier-title &Ucy;&kcy;&acy;&zhcy;&icy;&tcy;&iecy; &acy;&dcy;&rcy;&iecy;&scy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy;
+                              .delivery-courier-line.clearfix
+                                .col-sm-12
+                                  .form-group
+                                    ymaps(style='z-index: 40000; display: block; position: absolute; width: 632px; top: 52px; left: 0px;')
+                                    input#courierStreet.form-control.delivery-courier-form-street.js-delivery-address(type='text' placeholder='Улица*' data-text='ул. ' name='courierStreet' value='' autocomplete='off')
+                                .row
+                                  .col-sm-6
+                                    .form-group
+                                      input#courierHouse.form-control.delivery-courier-form-house.js-delivery-address(type='text' placeholder='№ дома*' data-text='д. ' name='courierHouse' value='')
+                                  .col-sm-6
+                                    .form-group
+                                      input#courierApps.form-control.delivery-courier-form-apps.js-delivery-address(type='text' placeholder='Квартира' data-text='кв. ' name='courierApps' value='')
+
+                              include ../blocks/checkout/delivery-courier-date/delivery-courier-date
+
+                        .delivery-pvz.delivery-place-select
+                          .delivery-pay-warning.hidden
+                            | &Ocy;&bcy;&rcy;&acy;&tcy;&icy;&tcy;&iecy; &vcy;&ncy;&icy;&mcy;&acy;&ncy;&icy;&iecy;! &Vcy; &dcy;&acy;&ncy;&ncy;&ocy;&mcy; &pcy;&ucy;&ncy;&kcy;&tcy;&iecy; &vcy;&ycy;&dcy;&acy;&chcy;&icy; &ncy;&iecy;&lcy;&softcy;&zcy;&yacy; &ocy;&pcy;&lcy;&acy;&tcy;&icy;&tcy;&softcy; &ncy;&acy;&lcy;&icy;&chcy;&ncy;&ycy;&mcy;&icy; &scy;&rcy;&iecy;&dcy;&scy;&tcy;&vcy;&acy;&mcy;&icy;. &Pcy;&ocy;&zhcy;&acy;&lcy;&ucy;&jcy;&scy;&tcy;&acy;, &vcy;&ycy;&bcy;&iecy;&rcy;&icy;&tcy;&iecy; &dcy;&rcy;&ucy;&gcy;&ocy;&jcy; &pcy;&ucy;&ncy;&kcy;&tcy; &vcy;&ycy;&dcy;&acy;&chcy;&icy; &icy;&lcy;&icy; &scy;&pcy;&ocy;&scy;&ocy;&bcy; &ocy;&pcy;&lcy;&acy;&tcy;&ycy;.
+                          .b-order__props-delivery-title &Vcy;&ycy;&bcy;&rcy;&acy;&ncy; &scy;&pcy;&ocy;&scy;&ocy;&bcy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&icy;:
+                          #deliveryPlaceSelect
+                          input#deliveryPlaceChange.btn.btn-radio(type='button' value='Изменить')
+                        script.
+                          if ((Math.max(document.documentElement.clientWidth, top.window.innerWidth || 0)) < 768) {
+                            [].map.call(document.querySelectorAll('.js-pvz-on-map'), function (el) {
+                              el.classList.remove('active');
+                            });
+                            [].map.call(document.querySelectorAll('.delivery-pvz-map'), function (el) {
+                              el.classList.add('hidden');
+                            });
+                            [].map.call(document.querySelectorAll('.js-pvz-in-list'), function (el) {
+                              el.classList.add('active');
+                            });
+                            [].map.call(document.querySelectorAll('.delivery-pvz-list'), function (el) {
+                              el.classList.remove('hidden');
+                            });
+                          }
+                  .b-order__props-payment
+                    .bx_section
+                      .b-order__props-payment-title &Scy;&pcy;&ocy;&scy;&ocy;&bcy; &ocy;&pcy;&lcy;&acy;&tcy;&ycy;
+                      .btn-group(data-toggle='buttons')
+                        label.bx_element.btn.btn-radio.active(for='ID_PAY_SYSTEM_ID_3' title='')
+                          input#ID_PAY_SYSTEM_ID_3(type='radio' name='PAY_SYSTEM_ID' value='3' checked='checked')
+                          .bx_description
+                            | &Ncy;&acy;&lcy;&icy;&chcy;&ncy;&ycy;&mcy;&icy;
+                        label.bx_element.btn.btn-radio.online-pay-discount-label-text(for='ID_PAY_SYSTEM_ID_7')
+                          input#ID_PAY_SYSTEM_ID_7(type='radio' name='PAY_SYSTEM_ID' value='7')
+                          .bx_description
+                            | &Ocy;&pcy;&lcy;&acy;&tcy;&acy; &ocy;&ncy;&lcy;&acy;&jcy;&ncy;
+                            span.online-pay-discount-label -3%
+                      div(style='clear: both;')
+                  .form-group.order-comment
+                    textarea#ORDER_DESCRIPTION.form-control.b-order__props-comment(name='ORDER_DESCRIPTION' placeholder='Комментарий к заказу')
+                  .bx_section(style='display:none')
+                    h4 &Scy;&vcy;&ocy;&jcy;&scy;&tcy;&vcy;&acy;, &scy;&vcy;&yacy;&zcy;&acy;&ncy;&ncy;&ycy;&iecy; &scy; &ocy;&pcy;&lcy;&acy;&tcy;&ocy;&jcy; &icy; &dcy;&ocy;&scy;&tcy;&acy;&vcy;&kcy;&ocy;&jcy;
+                    br
+                  script.
+                    if (typeof window.top.digitalData.changes !== "undefined") {
+                      window.digitalData.changes.push(["cart", {
+                        "currency": "RUB",
+                        "total": 8900,
+                        "subtotal": 8500,
+                        "lineItems": [{
+                          "product": {
+                            "skuCode": "48740",
+                            "article": "JCAPB199/101XS",
+                            "url": "/catalog/womens-clothing/clothing-and-home-sleep/JCAPB199-101/",
+                            "unitPrice": 8500,
+                            "availableForPickup": false,
+                            "availableForDelivery": true,
+                            "stock": 6,
+                            "imageUrl": "https://juicycouture.ru/upload/iblock/e68/e68d1667c8c9da7118d374e3238181f4.jpg",
+                            "thumbnailUrl": "https://juicycouture.ru/upload/resize_cache/iblock/e68/320_399_1/e68d1667c8c9da7118d374e3238181f4.jpg",
+                            "unitSalePrice": 8500,
+                            "currency": "RUB",
+                            "id": "48739",
+                            "name": "Рубашка домашняя",
+                            "categoryId": "15",
+                            "category": ["Одежда", "Одежда для дома и сна"]
+                          }, "quantity": 1, "subtotal": 8500
+                        }],
+                        "orderId": 0,
+                        "shippingMethod": "Курьером",
+                        "shippingCost": 400,
+                        "paymentMethod": "Наличными",
+                        "vouchers": [],
+                        "contactInfo": {
+                          "firstName": "",
+                          "lastName": "",
+                          "phone": "",
+                          "email": "",
+                          "city": "Дубна",
+                          "address": ""
+                        }
+                      }]);
+                      setTimeout(function () {
+                        window.digitalData.events.push({
+                          'category': 'Ecommerce',
+                          'name': 'Updated Cart',
+                          'cart': window.digitalData.cart
+                        });
+                      }, 500);
+                    }
+                .order-submit-block
+                  .form-group
+                    .checkbox
+                      label
+                        input(type='checkbox' checked='' name='i-agree')
+                        |  &yacy; &scy;&ocy;&gcy;&lcy;&acy;&scy;&iecy;&ncy; &scy; &ucy;&scy;&lcy;&ocy;&vcy;&icy;&yacy;&mcy;&icy;
+                        a(href='/reference/contract-offer/' target='_blank') &pcy;&ucy;&bcy;&lcy;&icy;&chcy;&ncy;&ocy;&jcy; &ocy;&fcy;&iecy;&rcy;&tcy;&ycy;
+                        |  &icy; &ocy;&bcy;&rcy;&acy;&bcy;&ocy;&tcy;&kcy;&ocy;&jcy; &mcy;&ocy;&icy;&khcy; &pcy;&iecy;&rcy;&scy;&ocy;&ncy;&acy;&lcy;&softcy;&ncy;&ycy;&khcy; &dcy;&acy;&ncy;&ncy;&ycy;&khcy; &vcy; &pcy;&ocy;&rcy;&yacy;&dcy;&kcy;&iecy;, &pcy;&rcy;&iecy;&dcy;&ucy;&scy;&mcy;&ocy;&tcy;&rcy;&iecy;&ncy;&ncy;&ocy;&mcy; &pcy;&ucy;&bcy;&lcy;&icy;&chcy;&ncy;&ocy;&jcy; &ocy;&fcy;&iecy;&rcy;&tcy;&ocy;&jcy;
+                  a#ORDER_CONFIRM_BUTTON.checkout.btn.btn-primary-black.btn-block(href='#') &Pcy;&ocy;&dcy;&tcy;&vcy;&iecy;&rcy;&dcy;&icy;&tcy;&softcy; &zcy;&acy;&kcy;&acy;&zcy;
+            .clear
+          input#confirmorder(type='hidden' name='confirmorder' value='N')
+          input#profile_change(type='hidden' name='profile_change' value='N')
+          input#is_ajax_post(type='hidden' name='is_ajax_post' value='Y')
+          input(type='hidden' name='json' value='Y')
+    div(style='display: none')
+      #sls-21607.bx-slst
+        input.bx-ui-slst-target(type='hidden' name='LOCATION' value='')
+        .bx-ui-slst-pool
+          .dropdown-block.bx-ui-slst-input-block
+            span.dropdown-icon
+            input.dropdown-field(type='text' name='' value='' autocomplete='off' style='display: none;')
+            .bx-ui-combobox-container(style='margin: 0px; padding: 0px; border: none; position: relative;')
+              input.bx-ui-combobox-fake(type='text' value='' autocomplete='off' placeholder='Выберите местоположение ...')
+            .dropdown-fade2white
+            .bx-ui-combobox-loader(data-bx-ui-id='combobox-loader')
+            .bx-ui-combobox-toggle(title='Открыть / закрыть' data-bx-ui-id='combobox-toggle')
+            .bx-ui-combobox-dropdown(data-bx-ui-id='combobox-dropdown' style='display: none;')
+              div(data-bx-ui-id='pager-pane')
+                div(style='height: 100px;')
+                div
+                div(style='height: 100px;')
+        div(data-bx-ui-id='slst-error')
+        .bx-ui-slst-loader
+
+      #sls-29095.bx-sls
+        .dropdown-block.bx-ui-sls-input-block
+          input.dropdown-field(type='text' autocomplete='off' name='LOCATION' value='' placeholder='* Город' style='display: none;')
+          .bx-ui-sls-container(style='margin: 0px; padding: 0px; border: none; position: relative;')
+            input.bx-ui-sls-route(type='text' disabled='disabled' autocomplete='off' style='padding: 0px; margin: 0px;')
+            input.bx-ui-sls-fake(type='text' autocomplete='off' value='' placeholder='* Город')
+          .dropdown-fade2white
+          .bx-ui-sls-loader
+          .bx-ui-sls-clear(title='Отменить выбор' style='display: none;')
+          .bx-ui-sls-pane(style='overflow: hidden auto; display: none;')
+            .bx-ui-sls-variants
+        .bx-ui-sls-error-message
+
+    #js-popup-gifts.modal.fade(tabindex='-1' role='dialog')
+      .modal-dialog(role='document')
+        .modal-content
+          .modal-header
+            button.close(type='button')
+              span(aria-hidden='true')
+            h4.modal-title &Vcy;&ycy;&bcy;&iecy;&rcy;&icy;&tcy;&iecy; &pcy;&ocy;&dcy;&acy;&rcy;&ocy;&kcy;
+          .modal-body
+            .gift-list
+    #quickViewProduct.modal.fade.b-catalog__modal-quick-view(tabindex='-1' role='dialog')
+      .modal-dialog(role='document')
+        .modal-header
+          button#closeQuickViewProduct.close(type='button')
+            span(aria-hidden='true')
+        .modal-content

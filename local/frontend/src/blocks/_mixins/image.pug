@@ -1,0 +1,40 @@
+//-
+  Подставляет в код картинки для трех разрешений и ретины
+
+  По умолчанию работает с jpg, но можно указать тип самостоятельно
+
+
+  main-1-sm.jpg   — название картинки для смарта
+  main-1-md.jpg   — название картинки для планшета
+  main-1-lg.jpg   — название картинки для деска
+  main-1-lgx2.jpg — название картинки для деска для ретины (телефо и смарт аналогично)
+
+  main-1-sm       — передаем в миксин
+
+
+  Пример:
+
+  +retinaImage({
+    class: 'main-news__image',
+    alt:   'Московский Художественный академический театр',
+    img:   'assets/img/main/main-1',
+    type:  'png'
+  })
+
+mixin retinaImage(data)
+  - const type = data.type ? data.type : 'jpg'
+
+  picture(class=data.classPicture ? data.classPicture : false)
+    source(
+      srcset=data.img + '-sm.' + type + ', ' + data.img + '-smx2.' + type + ' 2x'
+      media='(max-width: 767px)'
+    )
+    source(
+      srcset=data.img + '-md.' + type + ', ' + data.img + '-mdx2.' + type + ' 2x'
+      media='(min-width: 768px) and (max-width: 1279px)'
+    )
+    source(
+      srcset=data.img + '-lg.' + type + ', ' + data.img + '-lgx2.' + type + ' 2x'
+      media='(min-width: 1279px)'
+    )
+    img(class=data.class ? data.class : false  alt=data.alt src=data.img + '-md.' + type)

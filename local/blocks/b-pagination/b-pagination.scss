@@ -1,0 +1,50 @@
+@import "../colors";
+
+.b-pagination {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  clear: both;
+  &__prev {
+    &:before {
+      font-family: FontAwesome;
+      font-size: 13px;
+      content: '\f053';
+    }
+  }
+  &__next {
+    &:before {
+      font-family: FontAwesome;
+      font-size: 13px;
+      content: '\f054';
+    }
+  }
+  li {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-right: 30px;
+    span {
+      color: $pink;
+    }
+    &:last-child {
+      margin-right: 0px;
+    }
+    &:hover, &.active {
+      a {
+        color: $pink;
+      }
+    }
+    a {
+      font-size: 14px;
+      font-weight: bold;
+      color: $black;
+      text-decoration: none !important;
+      transition: all 0.4s;
+    }
+  }
+  &__wrapper {
+    text-align: right;
+  }
+}

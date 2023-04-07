@@ -1,0 +1,55 @@
+@import "../colors";
+
+.b-mainpage-youstyle {
+    /*background: $gray-f0 url("/images/JC_juicyad.jpg") top no-repeat;
+    background-size: cover;*/
+  @media (min-width: 768px) {
+    height: 500px;
+  }
+  @media (min-width: 992px) {
+    height: 740px;
+  }
+  .container {
+    width: 100%;
+    padding: 0;
+    text-align: center;
+  }
+  a.all-link {
+    display: inline-block;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+  &__content {
+    /*padding: 25px 40px 40px 40px;*/
+    /*width: 392px;
+    height: 120px;*/
+    /*background: $white;*/
+    text-align: center;
+    width: 100%;
+    height: 740px;
+
+    @media (min-width: 768px) {
+    //  margin: 400px auto 100px auto;
+      height: 360px;
+    }
+    @media (min-width: 992px) {
+     // margin: 658px auto 166px auto;
+      height: 520px;
+    }
+    &-title {
+      font-size: 55px;
+      font-weight: bold;
+      text-transform: uppercase;
+      line-height: 52px;
+    }
+    &-description {
+      font-family: Georgia;
+      font-size: 15px;
+      font-style: italic;
+      margin-bottom: 20px;
+    }
+  }
+}
