@@ -64,14 +64,14 @@ if (!empty($arResult['ITEMS']))
 								<?endforeach;?>
 							</ul>
 						</div>
-						<div class="b-catalog__goods-item-colors">
+						<?/*<div class="b-catalog__goods-item-colors">
 							<?$firstSKU = true?>
 							<?foreach ($arItem['SKU_ITEMS'] as $arSKU):?>
 								<a class="b-catalog__goods-item-colors-item <?if($firstSKU):?>active<?$firstSKU = false?><?endif?>" data-href="<?=$arSKU['ID']?>">
 									<img src="<?=$arSKU['COLOR_IMAGE']?>" width="20" height="20">
 								</a>
 							<?endforeach;?>
-						</div>
+						</div>*/?>
 					</div>
 				</div>
 				<?endforeach;?>

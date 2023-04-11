@@ -111,14 +111,14 @@ else {
                         <?endforeach;?>
                     </ul>
                 </div>
-                <div class="b-catalog__goods-item-colors">
+                <?/*<div class="b-catalog__goods-item-colors">
                     <?$firstSKU = true?>
                     <?foreach ($arItem['SKU_ITEMS'] as $arSKU):?>
                         <a class="b-catalog__goods-item-colors-item <?if($firstSKU):?>active<?$firstSKU = false?><?endif?>" data-href="<?=$arSKU['ID']?>">
                             <img src="<?=$arSKU['COLOR_IMAGE']?>" width="20" height="20">
                         </a>
                     <?endforeach;?>
-                </div>
+                </div>*/?>
             </div>
             <div class="b-catalog__goods-item-hover">
                 <div class="b-catalog__goods-item-wrapper">
@@ -187,14 +187,14 @@ else {
                                     <span class="price-base"><?=$arSKU['PRICE']?></span>
                                 <? } ?>
                             </div>
-                            <div class="b-catalog__goods-item-colors">
+                            <?/*<div class="b-catalog__goods-item-colors">
                                 <?$firstSKU = true?>
                                 <?foreach ($arItem['SKU_ITEMS'] as $arSKU):?>
                                     <a class="b-catalog__goods-item-colors-item <?if($firstSKU):?>active<?$firstSKU = false?><?endif?>" data-href="<?=$arSKU['ID']?>">
                                         <img src="<?=$arSKU['COLOR_IMAGE']?>" width="20" height="20">
                                     </a>
                                 <?endforeach;?>
-                            </div>
+                            </div>*/?>
                             <?if(!empty($arSKU['SIZES'])):?>
                                 <div class="b-catalog__sizes-list">
                                     <div class="b-catalog__sizes-ttl">Размер:</div>
