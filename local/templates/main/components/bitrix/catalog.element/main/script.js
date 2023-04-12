@@ -1,7 +1,8 @@
 $(function () {
     $(document).on('click', '.js-toggle-colors', function (e) {
-        $(this).toggleClass('shown');
-        $('#colorList').find('.hidden').toggleClass('hidden');
-        // $(this).siblings().addClass('shown hidden');
+        let text = $(this).find('.all-colors').text();
+        let newText = (text == 'Ещё цвета' ? 'Cкрыть' : 'Ещё цвета');
+        $(this).find('.all-colors').text(newText);
+        $('#colorList').find('.to-hide').toggleClass('hidden');
     });
 });
